@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Name">
+      <Text>Name of new currency</Text>
+    </HelpEntry>
+    <HelpEntry item="Max">
+      <Text>Maximum amount of currency that the user can have</Text>
+    </HelpEntry>
+    <HelpEntry item="Group">
+      <Text>Select currency group from the dropdown list (a new group can be created in Option Choices Plugin / Type Currency Group)</Text>
+    </HelpEntry>
+    <HelpEntry item="Position">
+      <Text>Position in a group – each group can have up to 3 positions (1 is the highest, 3 is the lowest).</Text>
+    </HelpEntry>
+    <HelpEntry item="External">
+      <Text>Check this box if the currency is external (use it as Premium currency) – You can have only 1 external currency.</Text>
+    </HelpEntry>
+    <HelpEntry item="Icon">
+      <Text>Select icon for this currency.</Text>
+    </HelpEntry>
+    <HelpEntry item="Description">
+      <Text>A short text entry to describe the text. Does not currently show up in game, but could if someone wanted it to.</Text>
+    </HelpEntry>
+    <HelpEntry item="Conversion Options">
+      <Text>Here you can create conversion rate for the currency.</Text>
+    </HelpEntry>
+    <HelpEntry item="Amount">
+      <Text>Amount of this new currency that will be converted to 1 of selected other currency.</Text>
+    </HelpEntry>
+    <HelpEntry item="Auto Convert">
+      <Text>Check this box if conversion should be automated.</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Create a new mob">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Name">
+      <Text>The name of the mob, will appear above the mob unless it is an Untargetable one. From Atavism 2019.1 this name will be only used in the spawner, during mob selection, as a codename, instead Display Name was introduced.</Text>
+    </HelpEntry>
+    <HelpEntry item="Display Name">
+      <Text>The name of the mob, will appear above the mob.</Text>
+    </HelpEntry>
+    <HelpEntry item="Subtitle">
+      <Text>The subtitle of the mob, will appear above the mob and below the name.</Text>
+    </HelpEntry>
+    <HelpEntry item="Game Object">
+      <Text>Drag in your prefab here from the Resources folder (requirements for it you can find below in Configuration section). Species: Choose the species of the mob. The list of options can be edited from the Option Choices.</Text>
+    </HelpEntry>
+    <HelpEntry item="Subspecies">
+      <Text>For cosmetic purposes only. this can be referenced in the UI.</Text>
+    </HelpEntry>
+    <HelpEntry item="Mob Type">
+      <Text>The type of mob. Generally Normal, but can be set to Untargetable for mobs that can’t be targeted, or Boss/Rare for other special cases. Also which is important, the experience which is given by defeating mobs is also based on the Mob Type and can be defined in the Game Setting Plugin by changing parameters:
+	  
+	MOB_EXP_RATE_NORMAL
+	MOB_EXP_RATE_RARE
+	MOB_EXP_RATE_BOSS
+
+if global parameter MOB_DEATH_EXP is set to true.</Text>
+    </HelpEntry>
+    <HelpEntry item="Faction">
+      <Text>The faction the mob belongs to. The faction influences how the mob will react to players and can be set up in the Factions plugin.</Text>
+    </HelpEntry>
+    <HelpEntry item="Mob Display">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Hit Range">
+      <Text>How far away other players/mobs can hit this target from (in meters). Giant mobs (such as a dragon) may have a large hit range so players don’t all have to crowd round its belly.</Text>
+    </HelpEntry>
+    <HelpEntry item="Walk Speed">
+      <Text>The speed the mob moves when roaming around or patrolling. (implemented in Atavism 2019.1)</Text>
+    </HelpEntry>
+    <HelpEntry item="Run Speed">
+      <Text>The speed the mob moves when in combat and chasing down an enemy. (implemented in Atavism 2019.1)</Text>
+    </HelpEntry>
+    <HelpEntry item="Primary Weapon">
+      <Text>The item (weapon) that is attached to the mob’s main hand. This will influence the damage it deals.</Text>
+    </HelpEntry>
+    <HelpEntry item="Secondary Weapon">
+      <Text>The item (weapon, shield or other) that is attached to the mob’s off hand. Any stats on the item will be applied to the mob.</Text>
+    </HelpEntry>
+    <HelpEntry item="Base Animation">
+      <Text>The animation state the mob is in by default (standing, swimming, flying). Only standing is supported by the default Mob Controller, but can easily be modified to handle all states.</Text>
+    </HelpEntry>
+    <HelpEntry item="Mob Combat Settings">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Experience min. Level">
+      <Text>Experience which will be given to the player after mobs death, for minimum mob level defined as Min. Level, if player will have same level as mob, and won't be part of group experience calculation</Text>
+    </HelpEntry>
+    <HelpEntry item="Additional Exp/Level">
+      <Text>Additional experience calculated per level from mob minimum level up to the current mob level, which will be given to the player after mobs death, for minimum mob level defined as Min. Level, if player will have same level as mob, and won't be part of group experience calculation</Text>
+    </HelpEntry>
+    <HelpEntry item="Min. Level – Max. Level">
+      <Text>Levels from which server will randomly choose a value and spawn mob with that level. This will also influence statistics of mob based on Stats Plugin.</Text>
+    </HelpEntry>
+    <HelpEntry item="Min. Damage – Max. Damage">
+      <Text>Damage range from which server will randomly choose a value and calculate damage based on that.</Text>
+    </HelpEntry>
+    <HelpEntry item="Auto Attack">
+      <Text>The ability the mob uses to attack. The mob will use the ability every time their cooldown has completed which is based on their attack speed.</Text>
+    </HelpEntry>
+    <HelpEntry item="Is Mob Attackable?">
+      <Text>Determines if the mob can be attackable or not.</Text>
+    </HelpEntry>
+    <HelpEntry item="Attack Speed">
+      <Text>Speed of auto-attack (obsolete, it’s overwritten by attack_speed from stats use stat instead)</Text>
+    </HelpEntry>
+    <HelpEntry item="Auto Attack">
+      <Text>Defines an Ability from Combat / Ability Plugin, which will be used for Auto Attack for the mob</Text>
+    </HelpEntry>
+    <HelpEntry item="Ability 1-3">
+      <Text>Defines an Ability from Combat / Ability Plugin, which will be used for Ability 1-3</Text>
+    </HelpEntry>
+    <HelpEntry item="Use when and Is less than %">
+      <Text>Defines condition when the mob will use Ability 1 for example when HP is less than a percentage.</Text>
+    </HelpEntry>
+    <HelpEntry item="Skinning Loot Table">
+      <Text>Defines loot table which will be dropped from the mob after skinning skill will be used on it after his death. SKINNING_SKILL_ID is required to set for that task, which can be found in the Game Settings Plugin.</Text>
+    </HelpEntry>
+    <HelpEntry item="Level Req">
+      <Text>Defines the required level of skill to allow skinning mob</Text>
+    </HelpEntry>
+    <HelpEntry item="Mob Individual Stats">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Stat">
+      <Text>Stat name from the drop-down list</Text>
+    </HelpEntry>
+    <HelpEntry item="Value">
+      <Text>Numeric value of stat You can add multiple stats for mobs.</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

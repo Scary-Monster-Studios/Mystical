@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1026245281918138}
+  m_IsPrefabParent: 1
+--- !u!1 &1026245281918138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4209139354752992}
+  - component: {fileID: 114229126183913050}
+  - component: {fileID: 143771200935422960}
+  - component: {fileID: 114129476029147594}
+  - component: {fileID: 114003345971191610}
+  - component: {fileID: 114874061127174172}
+  - component: {fileID: 114594430658137898}
+  - component: {fileID: 114831063599932256}
+  - component: {fileID: 114361007555440288}
+  m_Layer: 8
+  m_Name: Knight
+  m_TagString: Mob
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4209139354752992
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -278.0117, y: 12.738691, z: 101.411026}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114003345971191610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f636e37fb2411441a589e092d074398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  responseSound: []
+  responseSoundFemale: []
+  deathSound: []
+  deathSoundFemale: []
+  aggroSound: []
+  aggroSoundFemale: []
+  attackSound: []
+  attackSoundFemale: []
+  jumpSound: []
+  jumpSoundFemale: []
+  responseSoundName: []
+  responseSoundFemaleName: []
+  deathSoundName: []
+  deathSoundFemaleName: []
+  aggroSoundName: []
+  aggroSoundFemaleName: []
+  attackSoundName: []
+  attackSoundFemaleName: []
+  jumpSoundName: []
+  jumpSoundFemaleName: []
+--- !u!114 &114129476029147594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08534967bdf88fe40be74e7765eef60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portraitIcon: {fileID: 21300000, guid: d8f4234a1330e4142a5026a903cca078, type: 3}
+  mainHand: {fileID: 0}
+  mainHand2: {fileID: 0}
+  offHand: {fileID: 0}
+  offHand2: {fileID: 0}
+  mainHandRest: {fileID: 0}
+  mainHandRest2: {fileID: 0}
+  offHandRest: {fileID: 0}
+  offHandRest2: {fileID: 0}
+  shield: {fileID: 0}
+  shield2: {fileID: 0}
+  shieldRest: {fileID: 0}
+  shieldRest2: {fileID: 0}
+  head: {fileID: 0}
+  leftShoulderSocket: {fileID: 0}
+  rightShoulderSocket: {fileID: 0}
+  rootSocket: {fileID: 0}
+  leftFootSocket: {fileID: 0}
+  rightFootSocket: {fileID: 0}
+  pelvisSocket: {fileID: 0}
+  leftHipSocket: {fileID: 0}
+  rightHipSocket: {fileID: 0}
+  chestSocket: {fileID: 0}
+  backSocket: {fileID: 0}
+  neckSocket: {fileID: 0}
+  mouthSocket: {fileID: 0}
+  leftEyeSocket: {fileID: 0}
+  rightEyeSocket: {fileID: 0}
+  overheadSocket: {fileID: 0}
+  combatCloseDelay: 0.5
+--- !u!114 &114229126183913050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548f3c13703531b4581c0db8d77f0ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  nameHeight: 2
+  runThreshold: 2.5
+  combatSpeed: 0.8
+  jumpHeight: 1.5
+  slideWhenOverSlopeLimit: 1
+  friendlyTargetDecal: {fileID: 100000, guid: 39835da23d27f714bbc99f57b90971e7, type: 2}
+  neutralTargetDecal: {fileID: 100000, guid: 5cfab231cdab9ad4199b8bc2c0f4ee1e, type: 2}
+  enemyTargetDecal: {fileID: 100000, guid: 91a0e2ab10736de449b24d64c1f76dc8, type: 2}
+  checkUnderGround: 1
+  groundDistanceLayer:
+    serializedVersion: 2
+    m_Bits: 1141899265
+  colliderRadius: 0
+  colliderHeight: 0
+  colliderCenter: {x: 0, y: 0, z: 0}
+  idleAnimation: {fileID: 7400000, guid: 1cc79ba899a3add40ab5b8743edd38dd, type: 3}
+  walkAnimation: {fileID: 7400000, guid: 25ae5821d68375d41b24839f92672216, type: 3}
+  runAnimation: {fileID: 7400000, guid: 6e9efef671d978d42958b59e448b1695, type: 3}
+  jumpPoseAnimation: {fileID: 7400000, guid: a9e2b19cd7900e04a96f17f2082b5ada, type: 3}
+  combatIdleAnimation: {fileID: 7400000, guid: 47ef36bf2c51b4e4894da37d2f6106d0, type: 3}
+  unarmedAttackedAnimation: {fileID: 7400000, guid: 6757291ae8c4cda419608449982f163d,
+    type: 3}
+  specialAttack: {fileID: 0}
+  deathAnimation: {fileID: 7400000, guid: 7daecc06dfe21a546a34d40a9d1e845f, type: 3}
+  swimIdleAnimation: {fileID: 7400000, guid: 25ae5821d68375d41b24839f92672216, type: 3}
+  swimAnimation: {fileID: 7400000, guid: 6e9efef671d978d42958b59e448b1695, type: 3}
+  mountAnimation: {fileID: 0}
+  waveAnimation: {fileID: 0}
+  lieAnimation: {fileID: 0}
+  walkMaxAnimationSpeed: 0.75
+  trotMaxAnimationSpeed: 1
+  runMaxAnimationSpeed: 1
+  jumpAnimationSpeed: 1.15
+  landAnimationSpeed: 1
+--- !u!114 &114361007555440288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3688f4f9cf958f94fae720536377b926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 2
+  textfield: 
+  textheight: 0
+  renderDistance: 50
+  minFontSize: 1
+  maxFontSize: 5
+  friendlyNameColour: {r: 0, g: 1, b: 0, a: 1}
+  neutralNameColour: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  enemyNameColour: {r: 1, g: 0, b: 0, a: 1}
+  myDamageColour: {r: 1, g: 0, b: 0, a: 1}
+  targetDamageColour: {r: 1, g: 1, b: 1, a: 1}
+  myMessageColour: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  targetMessageColour: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+--- !u!114 &114594430658137898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e852df472b265c45b82e92d89fc13d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hairModels:
+  - {fileID: 100000, guid: 6b1758ee73e396e4b92878d6b387da3b, type: 2}
+  - {fileID: 100000, guid: 0cc4f32f99e57034eb88028ff5045d85, type: 2}
+  parentJoint: {fileID: 0}
+  hairPropertyName: HairTest
+  hairDirectory: 
+--- !u!114 &114831063599932256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95d2978ce59f454fa8a015470f6a553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelName: Knight
+  ScaleForModel: {x: 1, y: 1, z: 1}
+--- !u!114 &114874061127174172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b6894014f866a4b9aefaff682036ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceToStopAt: 1
+  activateTarget: {fileID: 0}
+--- !u!143 &143771200935422960
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026245281918138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.8
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0
+  m_Center: {x: 0, y: 0.9, z: 0}

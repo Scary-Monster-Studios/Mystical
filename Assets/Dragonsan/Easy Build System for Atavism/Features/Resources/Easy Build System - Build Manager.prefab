@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1933872199848250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4523313898102776}
+  - component: {fileID: 114562447903259940}
+  - component: {fileID: 9126391286156457175}
+  m_Layer: 0
+  m_Name: Easy Build System - Build Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4523313898102776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933872199848250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114562447903259940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933872199848250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44f130e1baf6664bbcd3cb4b690c75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildingSupport: 0
+  FreeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  DefaultPreviewMaterial: {fileID: 2100000, guid: 64fab233cad698e498297e9f1d15dd46,
+    type: 2}
+  Blueprints: []
+  Pieces:
+  - {fileID: 5917770917921359765, guid: 3a3e4c391835e6a46b3e49372f4beb34, type: 3}
+  - {fileID: 3550027613961505305, guid: f1facfccd5235664b882c9938c0cef11, type: 3}
+  - {fileID: 6876717190554293640, guid: fb2321db72c51344683e159e8d7a8090, type: 3}
+  - {fileID: 6471946864795697495, guid: 5130b8e241010ba49b0287dd67369809, type: 3}
+  - {fileID: 4351822252310186049, guid: 69b72bcefafc3174b950f40a8f43d76b, type: 3}
+  - {fileID: 7172095078989677107, guid: 61db3d282e2609d4ebe4046fef22c217, type: 3}
+  - {fileID: 1188188178305811088, guid: 96eb3a38c0caf484b9b1553f679cb705, type: 3}
+  - {fileID: 4655047922861027894, guid: a97a6bb0f4189864baccdf499101ba79, type: 3}
+  DefaultState: 4
+  CachedParts: []
+  CachedSockets: []
+  CachedAreas: []
+--- !u!114 &9126391286156457175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933872199848250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b001e2145ac4c47baebd2a7c5fac5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStorageSaving:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+StorageSaving,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnStorageLoading:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+StorageLoading,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnStorageLoadingResult:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+StorageLoadingResult,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnStorageSavingResult:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+StorageSavingResult,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnPieceInstantiated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+PieceInstantiated,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnPieceDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+PieceDestroyed,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnPieceChangedState:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+PieceChangedState,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnPieceChangedApperance:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+PieceChangedAppearance,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGroupInstantiated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+GroupInstantiated,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGroupUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+GroupUpdated,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnChangedBuildMode:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+ChangedBuildMode,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnChangedSocketState:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: EasyBuildSystem.Features.Scripts.Core.Base.Event.BuildEvent+ChangedSocketState,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

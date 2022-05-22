@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Name">
+      <Text>The name of the merchant table. This will be used to identify the table.</Text>
+    </HelpEntry>
+    <HelpEntry item="Table Items">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Item #">
+      <Text>The amount of this item that the merchant will have for sale from this table. If set to -1 then it will always have it. If set to a number above 0 it will only have those amounts for sale. If all gets bought it will only refresh when the refresh time has run out.</Text>
+    </HelpEntry>
+    <HelpEntry item="Count">
+      <Text>Number of items available (-1 unlimited)</Text>
+    </HelpEntry>
+    <HelpEntry item="Refresh Time">
+      <Text>How long it takes to add one item up to the count number (if there is a count limit set)</Text>
+    </HelpEntry>
+    <HelpEntry item="Add Item">
+      <Text>Adds another item field to this table.</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

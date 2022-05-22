@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Name">
+      <Text>Name of Spawn Data</Text>
+    </HelpEntry>
+    <HelpEntry item="Mob Template">
+      <Text>Select from drop down list a mob template which can be defined in Mobs Template Plugin</Text>
+    </HelpEntry>
+    <HelpEntry item="Num Spawns">
+      <Text>Number of mobs to spawn</Text>
+    </HelpEntry>
+    <HelpEntry item="Spawn Radius">
+      <Text>Area around spawn point where the mob will be spawned</Text>
+    </HelpEntry>
+    <HelpEntry item="Respawn (ms)">
+      <Text>Respawn time after the mob is destroyed to re-appear (obsolete). Mob will be spawned only once</Text>
+    </HelpEntry>
+    <HelpEntry item="Corps Despawn (ms)">
+      <Text>Time after which mobs corpse will disappear</Text>
+    </HelpEntry>
+    <HelpEntry item="Has Combat">
+      <Text>Is mob should be able to attack an enemies</Text>
+    </HelpEntry>
+    <HelpEntry item="Roam Radius (m)">
+      <Text>Roam area in meters</Text>
+    </HelpEntry>
+    <HelpEntry item="Merchant Table">
+      <Text>Select Merchant Table from the list if the mob should have a trade offer</Text>
+    </HelpEntry>
+    <HelpEntry item="Loot Table">
+      <Text>Select Loot Table from the list (obsolete, loot table from Mob Template will be used instead)</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

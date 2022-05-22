@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Name">
+      <Text>Name of new build object</Text>
+    </HelpEntry>
+    <HelpEntry item="Skill">
+      <Text>Skill needed to perform this action/build object in the game (can be defined in Skills Plugin)</Text>
+    </HelpEntry>
+    <HelpEntry item="Category">
+      <Text>Select category (can be defined in Option Choices Plugin)</Text>
+    </HelpEntry>
+    <HelpEntry item="Skill Level Req">
+      <Text>Specify the level of skill that player must have to perform this action</Text>
+    </HelpEntry>
+    <HelpEntry item="Weapon Req">
+      <Text>Select what weapon player should have to be able to perform this action (can be defined in Option Choices Plugin)</Text>
+    </HelpEntry>
+    <HelpEntry item="Max Distance">
+      <Text>how far away the player can build the object from where they are currently standing. If you want your players to have to stand beside the object they build set it to something low like 2, or if they can place the object anywhere in the claim set it larger such as 20.</Text>
+    </HelpEntry>
+    <HelpEntry item="Build Task Req Player?">
+      <Text>Check the box if yes (Not available yet)</Text>
+    </HelpEntry>
+    <HelpEntry item="Valid Claim Type">
+      <Text>Select from list (can be defined in Option Choices Plugin)</Text>
+    </HelpEntry>
+    <HelpEntry item="Available as Item Only?">
+      <Text>Defines if this building should be available only as an item or also in the building list</Text>
+    </HelpEntry>
+    <HelpEntry item="Interaction Type">
+      <Text>Select from the list (this allows the owner or player with proper permissions to interact with the last stage of the built object):
+	  
+	Chest: Allows storing items in the storage. You can define a number of slots.
+	Resource: Allows gathering resources, you can select a loot table which defines what items will be gathered from that building. Useful for simulating farming.
+	NPC: Allows spawning Mob/NPC which should be defined in Mob Spawn Data Plugin, where you can setup Mob as a merchant or an enemy.
+	Effect: Allows selecting effect which will be applied to the player or in an area like buff. The effect can be defined in Effects Plugin.
+	Instance: Allows defining something like a gateway to an instance where the player will be teleported to. An instance should be defined in Instances Plugin.
+	Leave Instance: Leave from current instance to the previous once.</Text>
+    </HelpEntry>
+    <HelpEntry item="Stage #">
+      <Text>Define stage of the building</Text>
+    </HelpEntry>
+    <HelpEntry item="Prefab">
+      <Text>Select prefab for this stage. It’s unity prefab with Claim Object Component on it</Text>
+    </HelpEntry>
+    <HelpEntry item="Time to Build">
+      <Text>How long it will take to finish building this element/stage</Text>
+    </HelpEntry>
+    <HelpEntry item="Items Required">
+      <Text>Items requird for the specific stage</Text>
+    </HelpEntry>
+    <HelpEntry item="Item #">
+      <Text>Select item from the list</Text>
+    </HelpEntry>
+    <HelpEntry item="Item # Count">
+      <Text>Quantity of item that is needed for a build at this stage</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

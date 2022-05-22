@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Character Race">
+      <Text>The Race of the Character Template. The options for this are set in the Option Choices plugin</Text>
+    </HelpEntry>
+    <HelpEntry item="Character Class">
+      <Text>The class of the character template. Options are defined in the Option Choices plugin.</Text>
+    </HelpEntry>
+    <HelpEntry item="Instance Name">
+      <Text>The instance where a character of the specified Class/Race spawns.</Text>
+    </HelpEntry>
+    <HelpEntry item="Spawn Location">
+      <Text>Where the character will spawn. An object can be dragged from the scene into the GameObject box, or manually specify the x/y/z coordinates.</Text>
+    </HelpEntry>
+    <HelpEntry item="Orientation">
+      <Text>The direction the character should face. Enter the desired angle around the y axis.</Text>
+    </HelpEntry>
+    <HelpEntry item="Stats">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Starting Level">
+      <Text>Specify the starting level for the character.</Text>
+    </HelpEntry>
+    <HelpEntry item="Auto-attack">
+      <Text>Specify what ability the character has as an auto-attack. If you leave this blank, the character will have no auto-attack.
+	  
+You can define all attributes for the player character (default ones in the Atavism, you can also create new ones):
+	  
+	attack_speed (Attack Speed): Speed for auto attack (delay between auto attacks in milliseconds)
+
+	critic (Critical chance): Chance for a critical attack
+
+	crush_resistance (Crash Resistance): Resistance to crash attack
+
+	dexterity (Dexterity): Attribute responsible for physical accuracy
+
+	endurance (Endurance): One endurance point is equal to 10 health-max points
+
+	evasion (Evasion): Attribute responsible to evade a physical attack
+
+	health (Health): The base health value for the character. This is not the final health, the health mod stat (by default, endurance) will be added on top of this to give a final health value.
+
+	health-max (Health): Maximum health
+
+	intelligence (Intelligence): Magical accuracy
+
+	magical_critic (Magical Critical Chance): Critical chance for a magical attack
+
+	magical_evasion (Magical Evasion): Attribute responsible to evade a magical attack
+
+	magical_resistance (Magical Resistance): Resistance to magical attack
+
+	mana (Mana): The base mana value for the character. This is not the final mana, the mana mod stat (by default, willpower) will be added on top of this to give a final mana value.
+
+	mana-max (Mana): Maximum mana
+
+	movement_speed (Movement Speed): Attribute responsible for movement speed
+
+	parry (Parry): Parry attribute decreases damage by 40%
+
+	physical_crit (Physical Critical Chance): Critical chance for a physical attack
+
+	physical_defense (Physical Defense): Attribute which is transferred one-to-one to three parameters: Crash, Pierce and Slash Resistance
+
+	potential (Potential): Determines power of a magical attack
+
+	slash_resistance (Slash Resistance): Resistance to slash attack
+
+	strength (Strength): Determines power of a physical attack
+
+	weight (Weight): Actual weight
+
+	weight-max (Weight): Maximum weight carried by the player
+
+	willpower (Willpower): One willpower point is equal to 10 mana-max points
+	  </Text>
+    </HelpEntry>
+    <HelpEntry item="Skills">
+      <Text>After a Race/Class template has been created skills can be added. Skills added to a template are known by the character as soon as they are created, and do not cost the player anything to learn. All of the abilities the skill has at level 0 or 1 are also given to the player. These abilities, if non-passive, will then be put on the players action bar allowing them the use of abilities as soon as they first log in.</Text>
+    </HelpEntry>
+    <HelpEntry item="Items">
+      <Text>he last thing that can be set for starting characters is the items they have. Just like Skills, there is no limit to the number of items that can be given to a starting character (but take care not to fill their bags too much). The amount of an item can be set (count) and whether or not it is equipped on the character.</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

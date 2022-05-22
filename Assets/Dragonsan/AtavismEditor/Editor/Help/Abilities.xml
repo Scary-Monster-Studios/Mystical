@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Name">
+      <Text>The name of the Ability.</Text>
+    </HelpEntry>
+    <HelpEntry item="Ability Type">
+      <Text>The type of Ability. Different types have different hit tests:
+	  
+	CombatMelee: Is for physical attacks.
+	MagicalAttack: Is for magical attacks.
+	Effect: Is for abilities that apply the effect on the target and has one special field Chance where you can set a chance for that effect.
+	FriendlyEffect: is for abilities which will always hit and are for abilities used on friendly targets. The friendly effect has a 100% hit chance.</Text>
+    </HelpEntry>
+    <HelpEntry item="Skill">
+      <Text>The Skill this Ability is associated with. The higher level the player skill is, the more chance it has to hit.</Text>
+    </HelpEntry>
+    <HelpEntry item="Passive">
+      <Text>Passive abilities are applied automatically and do not require activation. Passive abilities also require passive effect type, so the effect could be applied.</Text>
+    </HelpEntry>
+    <HelpEntry item="Icon">
+      <Text>The 2d Texture that will be displayed in the GUI for the Ability.</Text>
+    </HelpEntry>
+    <HelpEntry item="Experience">
+      <Text>Amount of experience gained when this ability is used by the player. (Added in Atavism 2019.1)</Text>
+    </HelpEntry>
+    <HelpEntry item="Activation Requirements">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Cost">
+      <Text>How much of the cost type is required to activate the ability.</Text>
+    </HelpEntry>
+    <HelpEntry item="Cost Type">
+      <Text>Defines the attribute with the definition of "Vitality" required to activate the ability (usually Health, Mana). The attribute can be defined in the Stats Plugin.</Text>
+    </HelpEntry>
+    <HelpEntry item="Cast Time">
+      <Text>How long the player needs to stand still to activate the Ability (in seconds).</Text>
+    </HelpEntry>
+    <HelpEntry item="Caster Effect">
+      <Text>The Effect required on the caster to activate the Ability.</Text>
+    </HelpEntry>
+    <HelpEntry item="Target Effect">
+      <Text>The Effect required on the target to activate the Ability. To use this option on the ability you have to tick the Req Target checkbox.</Text>
+    </HelpEntry>
+    <HelpEntry item="Is Consumed">
+      <Text>Is the effect on the caster/target removed when this Ability is activated.</Text>
+    </HelpEntry>
+    <HelpEntry item="Reagent">
+      <Text>The item the player must have to activate the Ability. If is Consumed ticked, the Item will be removed when the Ability is activated.</Text>
+    </HelpEntry>
+    <HelpEntry item="Consume all Reagents?">
+      <Text>Remove all necessary reagents from the player backpack when this Ability is activated?</Text>
+    </HelpEntry>
+    <HelpEntry item="Consume cost/reagent On Activation">
+      <Text>Defines if reagents and cost should be consumed on activation.</Text>
+    </HelpEntry>
+    <HelpEntry item="Count">
+      <Text>Number of reagent player must have to activate the Ability.</Text>
+    </HelpEntry>
+    <HelpEntry item="Weapon">
+      <Text>The type of Weapon the player must have equipped to activate the Ability, can be defined in the Option Choices Plugin.</Text>
+    </HelpEntry>
+    <HelpEntry item="AoE Radius">
+      <Text>If the target type is set to AoE, the AoE Radius specifies how big the area is that targets will be affected by the Ability.</Text>
+    </HelpEntry>
+    <HelpEntry item="AoE Type">
+      <Text>If the target type is set to AoE, the AoE Type specifies if the AoE Raiud is around (Player: PlayerRadius or Target: TargetRadius).</Text>
+    </HelpEntry>
+    <HelpEntry item="Max Range">
+      <Text>The target must be no further away from the caster than the Max Range. In meters.</Text>
+    </HelpEntry>
+    <HelpEntry item="Min Range">
+      <Text>The target must be at least the Min Range in meters away from the caster in meters.</Text>
+    </HelpEntry>
+    <HelpEntry item="AoE Angle">
+      <Text>Defines angle in front of the player within which the enemy can be affected by it. (Added in Atavism 2018.3)</Text>
+    </HelpEntry>
+    <HelpEntry item="Req Target?">
+      <Text>If the target should be required.</Text>
+    </HelpEntry>
+    <HelpEntry item="Req Facing Target?">
+      <Text>If the player should be facing to target to use the Ability.</Text>
+    </HelpEntry>
+    <HelpEntry item="Casting in Run?">
+      <Text>Should the ability be able to cast during movement, if the casting time is higher than 0. (Added in Atavism 2018.3)</Text>
+    </HelpEntry>
+    <HelpEntry item="Target Type">
+      <Text>The type of Target used for the Ability. If it is left None it will be able to be used on both enemies and friends. There are such options like:
+	  
+	Enemy: Single enemy target
+	Self: Player
+	Friendly: Single friendly target
+	Friend Not Self: Friendly target but not self
+	Group: Group members (Added in Atavism 2019.1)
+	AoE Enemy: Enemy targets in the AoE Radius
+	AoE Friendly: Friendly targets in the AoE Radius</Text>
+    </HelpEntry>
+    <HelpEntry item="Target State">
+      <Text>Whether the target needs to be alive or dead.</Text>
+    </HelpEntry>
+    <HelpEntry item="Species Target">
+      <Text>Whether the Ability can only be used on a certain Species, which are defined in the Option Choices Plugin and attached to Mob/NPC in Mobs Plugin.</Text>
+    </HelpEntry>
+    <HelpEntry item="Cooldown Attributes">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Global Cooldown">
+      <Text>Abilities that use the Global cooldown cannot be used within 1 second of another.</Text>
+    </HelpEntry>
+    <HelpEntry item="Weapon Cooldown">
+      <Text>Abilities that use the Weapon cooldown cannot be used within 3 seconds of another.</Text>
+    </HelpEntry>
+    <HelpEntry item="Cooldown Type">
+      <Text>A specific cooldown used to prevent an Ability (or multiple) from being used too quickly. If name in that field will be shared between many abilities then they will share the same cooldown.</Text>
+    </HelpEntry>
+    <HelpEntry item="Duration">
+      <Text>How long the player must wait before they can activate the Ability (or any other using the same Cooldown Type) again.</Text>
+    </HelpEntry>
+    <HelpEntry item="Effects">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Act. Target 1-6">
+      <Text>Whether the specified Effect is applied to the Target or the Caster. Effects from 4-6 were added in Atavism 2019.1.</Text>
+    </HelpEntry>
+    <HelpEntry item="Act. Effect 1-6">
+      <Text>The Effect applied when the Ability is activated. The effect is defined in Effects Plugin. Effects from 4-6 were added in Atavism 2019.1.</Text>
+    </HelpEntry>
+    <HelpEntry item="Coordinated Effects">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Effect Event 1-3">
+      <Text>What event in the Ability Activation process the Coordinated Effect should be shown. Completed is the most common option. Third coord effect was added in Atavism 2019.1. There are such options:
+	  
+	completed: will be triggered when Ability is completed
+	activating: will be triggered when Ability is activating
+	activated: will be triggered when Ability is activated (Not implemented yet)
+	initializing: will be triggered when Ability is initializing
+	channeling: will be triggered when Ability is channeling (Not implemented yet)
+	interrupted: will be triggered when Ability is interrupted (Not implemented yet)
+	failed: will be triggered when Ability is failed (Not implemented yet)</Text>
+    </HelpEntry>
+    <HelpEntry item="Coord. Effect 1-3">
+      <Text>What Coordinated Effect to show at the specified event. Coordinated Effect configuration is described in Coordinated Effect Plugin. Third coord effect was added in Atavism 2019.1.</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

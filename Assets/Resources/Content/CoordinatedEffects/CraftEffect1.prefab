@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 114232987661308750}
+  m_Layer: 0
+  m_Name: CraftEffect1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.96, z: -1.9099998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114232987661308750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5774ecf25b688a4c9dd833d2ffe98c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  activationDelay: 0
+  duration: 1.5
+  destroyWhenFinished: 1
+  slot: 0
+  particleObject: {fileID: 100002, guid: e0c82e4cda44945d0918554b304e6d70, type: 3}
+  particle: {fileID: 0}
+  soundClip: []
+  soundClipFemale: []
+  soundClip3D: 1
+  soundVolume: 1
+  mixerGroupName: SFX
+  maxDistance: 100
+  linear: 1
+  parentSlot: 1
+  highFromColider: 0
+  emiterRadiusResize: 0
+  hitLookAt: 0
+  ignoreOverrideLength: 0
+  interuptCanTerminateCoordEffect: 1

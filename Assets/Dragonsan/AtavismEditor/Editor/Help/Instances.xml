@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="us-ascii"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Name">
+      <Text>Name of the instance in the game. This must be exactly the same as the instance scene name.</Text>
+    </HelpEntry>
+    <HelpEntry item="Instance Type">
+      <Text>Dropdown menu containing options:
+	
+	World (Main World instance type)
+	Dungeon (Dungeon which can be used for single player/solo instance)
+	Group Dungeon (Dungeon instance dedicated to groups)
+	Player Instance (Private player instance)
+	Arena (Instance dedicated to Arena)
+	Guild (Private guild instance for guild members)	  
+	  </Text>
+    </HelpEntry>
+    <HelpEntry item="Create on Startup">
+      <Text>Define that the instance will be created when the server starts. Important Note: For all World type instances this option should be selected</Text>
+    </HelpEntry>
+    <HelpEntry item="Water Height">
+      <Text>Defines water level globally for a specific instance, below that level gravity won’t be applied to players and mobs and automatically will switch animations to swimming</Text>
+    </HelpEntry>
+    <HelpEntry item="Population Limit">
+      <Text>Max number of players (-1 to unlimited)</Text>
+    </HelpEntry>
+    <HelpEntry item="Markers">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Name">
+      <Text>Spawn (default name used by the server to set default spawn location/rotation for the instance)</Text>
+    </HelpEntry>
+    <HelpEntry item="Location">
+      <Text>World position where to spawn in the Instance</Text>
+    </HelpEntry>
+    <HelpEntry item="Rotation">
+      <Text>World rotation</Text>
+    </HelpEntry>
+    <HelpEntry item="Game Object">
+      <Text>A optional Game Object to get the location from. Most people create a cube and name it spawns and uses it here to set their spawn location. Then just turn it off so it does not get rendered, that way you always know where you set your spawn point in that scene.</Text>
+    </HelpEntry>
+    <HelpEntry item="Weather Profiles">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Weather Profile #">
+      <Text>Choose profile defined in Weather Plugin</Text>
+    </HelpEntry>
+    <HelpEntry item="Profile Priority">
+      <Text>Defines how often this profile will be chosen on the server compared to other profiles, for example, if one profile will have this value set to 50 and other to 1, then the profile with a higher value will be chosen 50 times more often than the other one (based on probability)</Text>
+    </HelpEntry>
+    <HelpEntry item="Months">
+      <Text>In which months this profile can be applied</Text>
+    </HelpEntry>
+    <HelpEntry item="Weather Seasons">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Weather Season #">
+      <Text>One of four seasons</Text>
+    </HelpEntry>
+    <HelpEntry item="Months">
+      <Text>Defines months for that particular season</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

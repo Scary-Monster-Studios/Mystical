@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Item types">
+      <Text>Here you can create a new type of items like:
+	  
+	Weapon
+	Armor
+	Consumable
+	Material
+	Junk
+	Quest
+	Bag
+	Container (not available yet)
+	Ammo</Text>
+    </HelpEntry>
+    <HelpEntry item="Weapon and Armor">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Name">
+      <Text>Name of new item</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Type:">
+      <Text>
+	  
+	  Weapon
+	  Armor</Text>
+    </HelpEntry>
+    <HelpEntry item="Subtype">
+      <Text>Select from the list which can be defined in Option Choices Plugin</Text>
+    </HelpEntry>
+    <HelpEntry item="Icon">
+      <Text>The icon that will be drawn in the GUI for the item.</Text>
+    </HelpEntry>
+    <HelpEntry item="Equipment Display">
+      <Text>Drag a prefab that has an EquipmentDisplay component on it. Only used for Weapons and Armor to set how the item looks on the player when equipped</Text>
+    </HelpEntry>
+    <HelpEntry item="Slot">
+      <Text>What slot the item is equipped to. Only used for Weapons and Armor.</Text>
+    </HelpEntry>
+    <HelpEntry item="Damage Type">
+      <Text>The type of damage this weapon does. Only used for Weapons. (only for Weapons and Ammo)</Text>
+    </HelpEntry>
+    <HelpEntry item="Damage Min – Damage Max">
+      <Text>The amount of damage this weapon increases the player damage by (random value from min-max)(only for Weapons and Ammo).</Text>
+    </HelpEntry>
+    <HelpEntry item="Delay">
+      <Text>How long the player must wait between Auto-Attacks when the weapon is equipped. Only used for Weapons.</Text>
+    </HelpEntry>
+    <HelpEntry item="Enchant Profile">
+      <Text>From the list, you can select Enchant Profile which will be used during enchanting to change item attributes.</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Quality">
+      <Text>The quality of the item, higher quality items should be harder to find, and be more expensive. Does not have any effect by itself. Affects color configuration like a border around icon in a backpack or on your character, but also tooltip name color. Item Quality list can be defined in the Option Choices Plugin.</Text>
+    </HelpEntry>
+    <HelpEntry item="Binding">
+      <Text>Defines the binding behavior of the item. Equip means the item cannot be given to another player once it has been equipped. The pickup means the item cannot be traded as soon as it has been picked up by the player.</Text>
+    </HelpEntry>
+    <HelpEntry item="Currency">
+      <Text>What currency is used to buy and sell the item.</Text>
+    </HelpEntry>
+    <HelpEntry item="Purchase Cost">
+      <Text>How much it costs to buy the item using the specified currency. This is the full price value for purchase and based on that value selling price will be calculated.</Text>
+    </HelpEntry>
+    <HelpEntry item="Is Item Sellable?">
+      <Text>Can the item be sold?</Text>
+    </HelpEntry>
+    <HelpEntry item="Auction Sellable?">
+      <Text>Can the item be sold on the auction?</Text>
+    </HelpEntry>
+    <HelpEntry item="Is Item Unique?">
+      <Text>A player can only have one of an item that is unique. (not working currently)</Text>
+    </HelpEntry>
+    <HelpEntry item="Stack Limit">
+      <Text>How many of the item can be stacked together in a single item slot.</Text>
+    </HelpEntry>
+    <HelpEntry item="Tool Tip">
+      <Text>A description of the item that players can view on the GUI</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Effects">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Add Item effect">
+      <Text>Optional</Text>
+    </HelpEntry>
+    <HelpEntry item="Effect # Type">
+      <Text>The type of effect the item has when equipped or used. Currently supports:
+	  
+	Stat (allowing selecting statistic like Strength, Intelligence, Vitality, Health, Mana, Defense and rest defined in the Stats Plugin)
+	UseAbility (activates an ability when clicked)
+	AutoAttack (replaces the players AutoAttack when equipped)
+	ClaimObject (build an object from an item, if required materials are present in the backpack)
+	CreateClaim (defines claim size numeric value, if clicked in the world allows a player to get a claim to the piece of land with specified size value)
+	StartQuest (select quest from the list)
+	Currency (select currency from the list) – automatically convert the item to the selected currency one to one
+	BuildingMaterial (numerical value, defines health for building material) (currently not working)
+	UseAmmo (Select Ammo type)
+	Weight (how much weight that item has)
+	Durability (value)
+	CraftItem (select craft recipe, so this item will act like craft recipe item, if you hover over that item then tooltip will be presented with information taken from recipe definition from Crafting Recipes Plugin like materials required to craft result item and also result item itself with its parameters to inform player what he will gain by crafting that item)
+	SpawnMob (will spawn mob which is defined in Mobs Plugin, the value is an integer and should reflect Mobs Template ID)
+	  </Text>
+    </HelpEntry>
+    <HelpEntry item="Requirements">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Add Requirements">
+      <Text>Optional</Text>
+    </HelpEntry>
+    <HelpEntry item="Type">
+      <Text>Type of requirement selected from the dropdown list that currently contains:
+	  
+	Level (level of requirement – specify needed level)
+	Skill Level (select skill and level of this skill, defined in Skills Plugin)
+	Race (Select race from the list, defined in Option Choices Plugin)
+	Class (select class from the list defined in Option Choices Plugin)
+	Stat (Select statistic from the list and required value of this stat for the player that should have, defined in Stats Plugin)</Text>
+    </HelpEntry>
+    <HelpEntry item="Consumable, Material, Junk, Bag, Quest">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Name">
+      <Text>The new item name.</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Type:">
+      <Text>
+	  
+	Consumable
+	Material
+	Junk
+	Quest
+	Container
+	Bag</Text>
+    </HelpEntry>
+    <HelpEntry item="Icon">
+      <Text>The icon that will be drawn in the GUI for the item.</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Quality">
+      <Text>The quality of the item, higher quality items should be harder to find, and be more expensive. Does not have any effect by itself.</Text>
+    </HelpEntry>
+    <HelpEntry item="Binding">
+      <Text>Defines the binding behavior of the item. Equip means the item cannot be given to another player once it has been equipped. The pickup means the item cannot be traded as soon as it has been picked up by the player.</Text>
+    </HelpEntry>
+    <HelpEntry item="Currency">
+      <Text>What currency is used to buy and sell the item.</Text>
+    </HelpEntry>
+    <HelpEntry item="Purchase Cast">
+      <Text>How much it costs to buy the item using the specified currency.</Text>
+    </HelpEntry>
+    <HelpEntry item="Is Item Sellable?">
+      <Text>Can the item be sold?</Text>
+    </HelpEntry>
+    <HelpEntry item="Auction Sellable?">
+      <Text>Can the item be sold on the auction?</Text>
+    </HelpEntry>
+    <HelpEntry item="Is Item Unique?">
+      <Text>A player can only have one of an item that is unique. (not working currently)</Text>
+    </HelpEntry>
+    <HelpEntry item="Stack Limit / Slots">
+      <Text>How many of the item can be stacked together in a single item slot. In case of Bag, it defines a number of slots in the bag (bag size).</Text>
+    </HelpEntry>
+    <HelpEntry item="Tool Tip">
+      <Text>A description of the item that players can view on the GUI.</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Effects">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Add Item effect">
+      <Text>Optional</Text>
+    </HelpEntry>
+    <HelpEntry item="Effect # Type">
+      <Text>The type of effect the item has when equipped or used. Currently supports:
+	  
+	Stat (allowing selecting statistic like Strength, Intelligence, Vitality, Health, Mana, Defense and rest defined in the Stats Plugin)
+	UseAbility (activates an ability when clicked)
+	AutoAttack (replaces the players AutoAttack when equipped)
+	ClaimObject (build an object from an item, if required materials are present in the backpack)
+	CreateClaim (defines claim size numeric value, if clicked in the world allows a player to get a claim to the piece of land with specified size value)
+	StartQuest (select quest from the list)
+	Currency (select currency from the list) – automatically convert the item to the selected currency one to one
+	BuildingMaterial (numerical value, defines health for building material) (currently not working)
+	UseAmmo (Select Ammo type)
+	Weight (how much weight that item has)
+	Durability (value)
+	CraftItem (select craft recipe, so this item will act like craft recipe item, if you hover over that item then tooltip will be presented with information taken from recipe definition from Crafting Recipes Plugin like materials required to craft result item and also result item itself with its parameters to inform player what he will gain by crafting that item)
+	SpawnMob (will spawn mob which is defined in Mobs Plugin, the value is an integer and should reflect Mobs Template ID)
+	  </Text>
+    </HelpEntry>
+    <HelpEntry item="Requirements">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Add Requirements">
+      <Text>Optional</Text>
+    </HelpEntry>
+    <HelpEntry item="Type">
+      <Text>Type of requirement selected from the dropdown list that currently contains:
+	  
+	Level (level of requirement – specify needed level)
+	Skill Level (select skill and level of this skill, defined in Skills Plugin)
+	Race (Select race from the list, defined in Option Choices Plugin)
+	Class (select class from the list defined in Option Choices Plugin)
+	Stat (Select statistic from the list and required value of this stat for the player that should have, defined in Stats Plugin)</Text>
+    </HelpEntry>
+    <HelpEntry item="Ammo">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Name">
+      <Text>Name of new Ammo</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Type">
+      <Text>Ammo</Text>
+    </HelpEntry>
+    <HelpEntry item="Icon">
+      <Text>The icon that will be drawn in the GUI for the item.</Text>
+    </HelpEntry>
+    <HelpEntry item="Ammo Type">
+      <Text>Select type of Ammo like Arrow or Bullet, but it can be defined in Option Choices Plugin</Text>
+    </HelpEntry>
+    <HelpEntry item="Damage Min – Damage Max">
+      <Text>Numeric value of damage between min and max.</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Quality">
+      <Text>The quality of the item, higher quality items should be harder to find, and be more expensive. Does not have any effect by itself.</Text>
+    </HelpEntry>
+    <HelpEntry item="Binding">
+      <Text>Defines the binding behavior of the item. Equip means the item cannot be given to another player once it has been equipped. The pickup means the item cannot be traded as soon as it has been picked up by the player.</Text>
+    </HelpEntry>
+    <HelpEntry item="Currency">
+      <Text>What currency is used to buy and sell the item.</Text>
+    </HelpEntry>
+    <HelpEntry item="Purchase Cast">
+      <Text>How much it costs to buy the item using the specified currency.</Text>
+    </HelpEntry>
+    <HelpEntry item="Is Item Sellable?">
+      <Text>Can the item be sold?</Text>
+    </HelpEntry>
+    <HelpEntry item="Auction Sellable?">
+      <Text>Can the item be sold on the auction?</Text>
+    </HelpEntry>
+    <HelpEntry item="Is Item Unique?">
+      <Text>A player can only have one of an item that is unique. (not working currently)</Text>
+    </HelpEntry>
+    <HelpEntry item="Stack Limit">
+      <Text>How many of the item can be stacked together in a single item slot.</Text>
+    </HelpEntry>
+    <HelpEntry item="Tool Tip">
+      <Text>A description of the item that players can view on the GUI.</Text>
+    </HelpEntry>
+    <HelpEntry item="Item Effects">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Add Item effect">
+      <Text>Optional</Text>
+    </HelpEntry>
+    <HelpEntry item="Effect # Type">
+      <Text>The type of effect the item has when equipped or used. Currently supports:
+	  
+	Stat (allowing selecting statistic like Strength, Intelligence, Vitality, Health, Mana, Defense and rest defined in the Stats Plugin)
+	UseAbility (activates an ability when clicked)
+	AutoAttack (replaces the players AutoAttack when equipped)
+	ClaimObject (build an object from an item, if required materials are present in the backpack)
+	CreateClaim (defines claim size numeric value, if clicked in the world allows a player to get a claim to the piece of land with specified size value)
+	StartQuest (select quest from the list)
+	Currency (select currency from the list) – automatically convert the item to the selected currency one to one
+	BuildingMaterial (numerical value, defines health for building material) (currently not working)
+	UseAmmo (Select Ammo type)
+	Weight (how much weight that item has)
+	Durability (value)
+	CraftItem (select craft recipe, so this item will act like craft recipe item, if you hover over that item then tooltip will be presented with information taken from recipe definition from Crafting Recipes Plugin like materials required to craft result item and also result item itself with its parameters to inform player what he will gain by crafting that item)
+	SpawnMob (will spawn mob which is defined in Mobs Plugin, the value is an integer and should reflect Mobs Template ID)
+	  </Text>
+    </HelpEntry>
+    <HelpEntry item="Requirements">
+      <Text> </Text>
+    </HelpEntry>
+    <HelpEntry item="Add Requirements">
+      <Text>Optional</Text>
+    </HelpEntry>
+    <HelpEntry item="Type">
+      <Text>Type of requirement selected from the dropdown list that currently contains:
+	  
+	Level (level of requirement – specify needed level)
+	Skill Level (select skill and level of this skill, defined in Skills Plugin)
+	Race (Select race from the list, defined in Option Choices Plugin)
+	Class (select class from the list defined in Option Choices Plugin)
+	Stat (Select statistic from the list and required value of this stat for the player that should have, defined in Stats Plugin)</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

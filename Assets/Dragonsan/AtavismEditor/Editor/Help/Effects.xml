@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<HelpEditing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HelpData>
+    <HelpEntry item="Name">
+      <Text>The name of the effect.</Text>
+    </HelpEntry>
+    <HelpEntry item="Effect Type">
+      <Text>Choose the type of effect. Can choose from Damage, Heal or Stat. Stat Effects can alter the stats of a player or mob.
+	  
+	Damage: Defines different damage types, based on which server will calculate damage output:
+
+		Melee Strike Effect: Physical type of damage
+		Magical Strike Effect: Magical type of damage
+		Physical DoT Effect: Physical type of damage with additional Duration, Number of Pulses, Stack Limit, which defines how long the effect will last, how many times it will be triggered within that time and is it stackable to allow few same effects to be active on the target.
+		Magical DoT Effect: Magical type of damage with additional Duration, Number of Pulses, Stack Limit, which defines how long the effect will last, how many times it will be triggered within that time and is it stackable to allow few same effects to be active on the target.
+		Flat Damage Effect: Flat damage doesn’t take any resistance into account.
+
+		Note: Physical damage types takes into account Physical Power Stat Function which is configurable for Stat and can be defined in Stats Plugin. Important factors are also damaging type and resistance to that damage.
+		Note: Magical damage types takes into account Magical Power Stat Function which is configurable for Stat and can be defined in Stats Plugin. Important factors are also damaging type and resistance to that damage.
+
+	Restore: Defines different health and restoration in general for all Vitality Stats Types defined in Stats Plugin (It can be Health, Mana, Weight, but you can define more like Stamina, etc.):
+
+		Heal Instant Effect: Instantly recovers the defined amount of Stat
+		Heal Over Time Effect: Recovers defined amount of Stat over time with an additional parameter like Duration, Stack Limit, Number of Pulses (commonly known as HoT)
+		Health Transfer Effect: Only used for HealthTransfer effects, the conversion rate affects how much health is transferred from the caster to the target.
+
+	Revive: When this type of effect is applied it will restore up to 3 Vitality Statistics, like Health, Mana, etc. by a defined percentage.
+
+	Stat: This effect type defines which statistics can be changed and if they will be changed by value or percentage (up to 5 statistics). It can be defined to stay after Logout or it can be set as Passive Effect for Passive Abilities.
+
+	Stun: Stun effect will prevent any action of the stunned object.
+
+	Sleep: Sleep effect is similar to Stun effect but with one exception, if the Slept target will take any damage then it will be wakened up.
+
+	Immune: Immuned entity won’t take any damage during Immune Effect is active.
+
+	Morph: This effect swaps model of the entity and can change Action Bar
+
+	Dispel: Effect can dispell Buffs, Debuffs, All or Mount Effect. Amount of effects which will be dispelled can be defined.
+
+	Teleport: This effect can be used in many ways. When Teleport Type is set to Standard it will act as normal Gateway to an instance, but also with one exception, if no Instance is specified it will teleport the player to defined Location but in the same instance. If Teleport Type is set To Target then it will teleport the player to the target location for example to an enemy or a friendly target.
+
+	Mount: Effect defines mount which will be spawned and attached to the player. Requires additional definition for Mount Model. It is possible to define the Type of Mount like Ground, Swimming, Flying, but also Speed Increase percentage when the mount is summoned. It also allows to define one additional stat which can be altered for the mounted player.
+
+	Build Object: Effect allows to define Building Object to be build when the effect occurs.
+
+	Teach Ability: Defines effect which teaches the selected Ability in Abilities Plugin (most common purpose is to act like skill book or in this case as ability book)
+
+	Teach Skill: Defines effect which teaches the selected Skill in Skills Plugin (most common purpose is to act like skill book)
+
+	Task: Effect which defines complete task (used as an objective for the quest, defined in Tasks Plugin and attached in Quests Plugin)
+
+	State:
+
+	Threat: Effect is commonly used in increasing or decreasing aggro of mobs. Right now aggro is based on damage dealt, so damage dealers are getting the most attention of mobs, which can be altered by putting an additional effect on different types of Abilities with this Threat Effect.
+
+	Create Item: Effect will create an item which can be selected in Items from the list of all Items which can be defined in Items Plugin.
+
+	Spawn: Effect can spawn a few types of entities, based on a definition in Spawn Type:
+
+		Wild: If spawn type is set to Wild Spawn Data will be presented, which defines mob as it would be normally spawned by the administrator but instead it can be spawn through Effect which can be attached to Ability, Interactive Object, Region, etc. Spawn Data is a definition of the mob in Mob Spawn Data Plugin.
+		Non Combat Pet: If spawn type is set to Non-Combat Pet, then Pet Model can be selected, it will follow it’s master/owner/summoner. Pet Model can be defined in Mobs Plugin.
+		Combat Pet: If spawn type is set to Combat Pet, then Pet Model can be selected, it will follow it’s master/owner/summoner. Pet Model can be defined in Mobs Plugin. Combat Pet has all attributes of Mob Template, it’s level, Health, etc. When effect with such pet is used then in GUI new information will be presented with Pet Command Control with actions:  Attack, Follow, Stay and stance: Aggressive, Defensive, Passive.
+
+	Set Respawn Location: Effect defines a new spawn location for the player. Useful for a binding player to the specific point to spawn at that point. Can be used in combination with Interactive Objects, Regions, but also Abilities.</Text>
+    </HelpEntry>
+  </HelpData>
+</HelpEditing>

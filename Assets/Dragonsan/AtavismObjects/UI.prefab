@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400006}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: ScriptUpdater
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0.031594142, y: 0.90404916, z: -0.058703493, w: -0.42219773}
+  m_LocalPosition: {x: -1073.1514, y: 185.32237, z: 3088.3096}
+  m_LocalScale: {x: 0.9105214, y: 0.9105099, z: 0.91052186}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207461a7104914249baae619ed7857dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  layerForTexts: AtavismText
+  defaultCursor: {fileID: 2800000, guid: 4ed3a5063cdfb254a8e1ae64566da949, type: 3}
+  attackCursor: {fileID: 2800000, guid: d7324ac75d02f0b4aabc0008b34716d4, type: 3}
+  lootCursor: {fileID: 2800000, guid: 1d60c758790cff842a4213d7d0f61185, type: 3}
+  speakCursor: {fileID: 2800000, guid: e887acf1fd1385b43b9133ba1992c341, type: 3}
+  skinCursor: {fileID: 0}
+  socketCursor: {fileID: 0}
+  itemPickupButton: 1
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabAsset: 1
