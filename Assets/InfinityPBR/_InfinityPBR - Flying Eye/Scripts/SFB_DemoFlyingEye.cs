@@ -51,7 +51,6 @@ public class SFB_DemoFlyingEye : MonoBehaviour {
 
 	public void Projectile(){
 		GameObject newObject = Instantiate(projectile, spawnPos.position, Quaternion.identity);
-		newObject.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 		Destroy (newObject, 7.0f);
 	}
 }

@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1923631199829734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4922663976704598}
+  - component: {fileID: 114369454316791008}
+  - component: {fileID: 143775391291417778}
+  - component: {fileID: 114848219093284596}
+  - component: {fileID: 114350525318037060}
+  - component: {fileID: 114090123486884770}
+  - component: {fileID: 114740579344464810}
+  - component: {fileID: 8784017662315559212}
+  m_Layer: 8
+  m_Name: BomberBug05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4922663976704598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923631199829734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114369454316791008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923631199829734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1952ce2332d4a49b5750b24ec3da81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  nameHeight: 3
+  runThreshold: 2.5
+  combatSpeed: 1
+  jumpHeight: 1.5
+  slideWhenOverSlopeLimit: 0
+  friendlyTargetDecal: {fileID: 100000, guid: 39835da23d27f714bbc99f57b90971e7, type: 3}
+  neutralTargetDecal: {fileID: 100000, guid: 5cfab231cdab9ad4199b8bc2c0f4ee1e, type: 3}
+  enemyTargetDecal: {fileID: 100000, guid: 91a0e2ab10736de449b24d64c1f76dc8, type: 3}
+  checkUnderGround: 0
+  groundDistanceLayer:
+    serializedVersion: 2
+    m_Bits: 1341795017
+  maxGroundDistance: 20
+  colliderRadius: 0
+  colliderHeight: 0
+  colliderCenter: {x: 0, y: 0, z: 0}
+  characterNoMove: 0
+--- !u!143 &143775391291417778
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923631199829734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2.4
+  m_Radius: 1.2
+  m_SlopeLimit: 80
+  m_StepOffset: 1
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.2, z: 0}
+--- !u!114 &114848219093284596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923631199829734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08534967bdf88fe40be74e7765eef60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portraitIcon: {fileID: 21300000, guid: f7a8e77361c190c469178381db91303e, type: 3}
+  mainHand: {fileID: 0}
+  mainHand2: {fileID: 0}
+  offHand: {fileID: 0}
+  offHand2: {fileID: 0}
+  mainHandRest: {fileID: 0}
+  mainHandRest2: {fileID: 0}
+  offHandRest: {fileID: 0}
+  offHandRest2: {fileID: 0}
+  shield: {fileID: 0}
+  shield2: {fileID: 0}
+  shieldRest: {fileID: 0}
+  shieldRest2: {fileID: 0}
+  head: {fileID: 0}
+  leftShoulderSocket: {fileID: 0}
+  rightShoulderSocket: {fileID: 0}
+  rootSocket: {fileID: 0}
+  leftFootSocket: {fileID: 0}
+  rightFootSocket: {fileID: 0}
+  pelvisSocket: {fileID: 0}
+  leftHipSocket: {fileID: 0}
+  rightHipSocket: {fileID: 0}
+  chestSocket: {fileID: 0}
+  backSocket: {fileID: 0}
+  neckSocket: {fileID: 0}
+  mouthSocket: {fileID: 0}
+  leftEyeSocket: {fileID: 0}
+  rightEyeSocket: {fileID: 0}
+  overheadSocket: {fileID: 0}
+  combatCloseDelay: 0.5
+--- !u!114 &114350525318037060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923631199829734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3688f4f9cf958f94fae720536377b926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 3
+  textfield: 
+  textheight: 0
+  renderDistance: 50
+  minFontSize: 1
+  maxFontSize: 5
+  nameOnSelf: 0
+--- !u!114 &114090123486884770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923631199829734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95d2978ce59f454fa8a015470f6a553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelName: BomberBug05
+  ScaleForModel: {x: 2, y: 2, z: 2}
+--- !u!114 &114740579344464810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923631199829734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b6894014f866a4b9aefaff682036ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceToStopAt: 1
+  activateTarget: {fileID: 0}
+--- !u!114 &8784017662315559212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923631199829734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774d19b955d4bef44a4a9402c72b8ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7317645705355031116, guid: 0e233206387f2954397f5e773d37c6ff, type: 3}

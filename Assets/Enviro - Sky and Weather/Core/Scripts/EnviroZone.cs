@@ -240,13 +240,13 @@ public class EnviroZone : MonoBehaviour {
 			}else
 			if (EnviroSkyMgr.instance.GetCurrentSeason() == EnviroSeasons.Seasons.Summer)
 			{
-				if (würfel <= curPossibleZoneWeather[i].weatherPreset.possibiltyInSummer)
+					if (würfel <= curPossibleZoneWeather[i].weatherPreset.possibiltyInSummer)
 					over.Add(curPossibleZoneWeather[i]);
 			}else
 			if (EnviroSkyMgr.instance.GetCurrentSeason() == EnviroSeasons.Seasons.Autumn)
 			{
-				if (würfel <= curPossibleZoneWeather[i].weatherPreset.possibiltyInAutumn)
-					over.Add(curPossibleZoneWeather[i]);
+					if (würfel <= curPossibleZoneWeather[i].weatherPreset.possibiltyInAutumn)
+				over.Add(curPossibleZoneWeather[i]);
 			}else
 			if (EnviroSkyMgr.instance.GetCurrentSeason() == EnviroSeasons.Seasons.Winter)
 			{
@@ -367,13 +367,11 @@ public class EnviroZone : MonoBehaviour {
 
         if (EnviroSkyMgr.instance.GetUseWeatherTag()) {
 			if (col.gameObject.tag == EnviroSkyMgr.instance.GetEnviroSkyTag()) {
-				Debug.Log("Change Zone by Tag");
                 EnviroSkyMgr.instance.SetCurrentActiveZone(this);
                 EnviroSkyMgr.instance.NotifyZoneChanged (this);
 			}
 		} else {
 			if (EnviroSkyMgr.instance.IsEnviroSkyAttached(col.gameObject)) {
-				Debug.Log("Change Zone by Component");
                 EnviroSkyMgr.instance.SetCurrentActiveZone(this);
                 EnviroSkyMgr.instance.NotifyZoneChanged (this);
 			}
@@ -401,14 +399,10 @@ public class EnviroZone : MonoBehaviour {
 	void OnDrawGizmos () 
 	{
 		Gizmos.color = zoneGizmoColor;
-		
-		Matrix4x4 rotationMatrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
-		Gizmos.matrix = rotationMatrix;
 
         if (useMeshZone && zoneMesh != null)
-             Gizmos.DrawMesh(zoneMesh, 0, Vector3.zero, Quaternion.identity, zoneScale);
+            Gizmos.DrawMesh(zoneMesh);
         else
-            Gizmos.DrawCube(Vector3.zero, new Vector3(zoneScale.x, zoneScale.y, zoneScale.z));
-
+            Gizmos.DrawCube(transform.position, new Vector3(zoneScale.x, zoneScale.y, zoneScale.z));
 	}
 }

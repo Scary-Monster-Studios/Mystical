@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400002}
+  m_Layer: 0
+  m_Name: MobAttack01RangeSpider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.96, z: -1.9099998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5025da6d01e1194bafb4c33cf6408ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  activationDelay: 0
+  duration: 3
+  destroyWhenFinished: 1
+  objectType: 2
+  coordAnimationType: 1
+  animationType: 2
+  animationName: Attack03
+  animationClip: {fileID: 0}
+  animationFloatValue: 0
+  animationFloatValueAfter: 0
+  animationIntValue: 0
+  animationIntValueAfter: 0
+  animationLength: 3
+  soundClip:
+  - {fileID: 0}
+  soundClipFemale:
+  - {fileID: 0}
+  soundClip3D: 1
+  soundVolume: 1
+  soundDelay: 0
+  loopSound: 0
+  soundRepeatTime: 0
+  mixerGroupName: SFX
+  maxDistance: 100
+  linear: 1
+  slot: 0
+  particle: {fileID: 0}
+  particleDelay: 0
+  loopParticle: 0
+  particleRepeatTime: 0
+  attachParticleToSocket: 0
+  interruptWhenMoving: 0
+  hideWeapons: 0
+  hideTime: 0
+  lookAtTarget: 0
+  ignoreOverrideLength: 0
+  interuptCanTerminateCoordEffect: 0

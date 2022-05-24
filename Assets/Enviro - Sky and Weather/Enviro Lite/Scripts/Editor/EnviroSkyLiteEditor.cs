@@ -8,7 +8,7 @@ using UnityEditorInternal;
 [CustomEditor(typeof(EnviroSkyLite))]
 public class EnviroSkyLiteEditor : Editor {
 
-	private string latestVersion = "2.4.1";
+	private string latestVersion = "2.3.1";
 	// GUI Styles
 	private GUIStyle boxStyle;
 	private GUIStyle boxStyleModified;
@@ -30,9 +30,9 @@ public class EnviroSkyLiteEditor : Editor {
 	SerializedProperty Player,Camera,PlayerTag,CameraTag, AssignOnRuntime, tonemapping;
 	SerializedProperty cycleLenghtInMinutes,ProgressMode, Years,Days,Hours,Minutes,Seconds,Longitude,Latitude, DayLength,NightLength,UTC, UpdateSeason, CurrentSeason, DaysInYear;
 	SerializedProperty UpdateWeather,StartWeather, EnableSunShafts,EnableMoonShafts,AmbientVolume,WeatherVolume;
-	SerializedProperty stopRotationAtHigh, rotationStopHigh, angleOffset,lightColorGradient, lightIntensityCurveSun,lightIntensityCurveMoon, shadowStrength, globalReflectionsUpdateOnPosition, globalReflectionsUpdateOnGameTime;
+	SerializedProperty lightIntensityToLumen, stopRotationAtHigh, rotationStopHigh, angleOffset,lightColorGradient, lightIntensityCurveSun,lightIntensityCurveMoon, shadowStrength, globalReflectionsUpdateOnPosition, globalReflectionsUpdateOnGameTime;
 	SerializedProperty directionalLightMode,lightIntensityTransitionSpeed, ambientMode, ambientIntensityCurve, ambientSkyGradient, ambientEquatorGradient, ambientGroundGradient;
-	SerializedProperty updateDefaultEnvironmentReflections,globalReflectionLayers, globalReflectionResolution, globalReflectionsScale, reflectionBool, reflectionIntensity, reflectionUpdate;
+	SerializedProperty globalReflectionLayers, globalReflectionResolution, globalReflectionsScale, reflectionBool, reflectionIntensity, reflectionUpdate;
     SerializedProperty blackGroundMode,sunDiskSizeSimple, simpleSunColor, simpleSkyColor, simpleHorizonColor, renderMoon, skyboxMode, customSkyboxMaterial, customSkyboxColor, rayleigh, scatteringCurve, scatteringColor, sunMoonPos,  moonPhaseMode, moonSize, moonTexture, currentMoonPhase, skyLuminance, skyColorPower, skyExposure, cloudsExposure, fogExposure,starsCubemap, starsIntensity,moonColor;
     SerializedProperty cirrusCloudsAltitude, cirrusCloudsColor, cirrusCloudsTexture, particleCloudsHeight1, particleCloudsColor1, particleCloudsHeight2, particleCloudsColor2;
     SerializedProperty useTag, wetnessAccumulationSpeed,wetnessDryingSpeed, snowAccumulationSpeed,snowMeltingSpeed,cloudTransitionSpeed,fogTransitionSpeed,effectTransitionSpeed,audioTransitionSpeed, useWindZoneDirection,windTimeScale,windIntensity,windDirectionX,windDirectionY;
@@ -43,8 +43,6 @@ public class EnviroSkyLiteEditor : Editor {
     SerializedProperty dualLayerParticleClouds, renderClouds, particleClouds, dayNightSwitch, usePostEffectFog, useUnityFog, sunIntensity, reflectionUpdatePos, showFogInEditor;
     SerializedProperty springBaseTemperature, summerBaseTemperature, autumnBaseTemperature, winterBaseTemperature, temperatureChangingSpeed, snowMeltingTresholdTemperature, windIntensityTransitionSpeed, setCameraClearFlags;
     SerializedProperty flatCloudsBaseTexture, flatCloudsDetailTexture, flatCloudsDirectLightColor, flatCloudsAmbientLightColor, flatCloudsAltitude, flatCloudsBaseTextureTiling, flatCloudsDetailTextureTiling, cloudsDetailWindIntensity;
-    //HDRP
-    SerializedProperty lightIntensityLuxMult, exposure, setEnviroSkybox, skyboxExposure, controlSceneExposure, ambientColorMod, indirectLightingUpdateMode,fogColorTint,exposurePhysical, skyExposurePhysical, lightingUpdateEachFrames, useEnviroFog, useHDRPFog, usePhysicalBasedLighting, sunIntensityLux, moonIntensityLux, lightColorTemperature, lightColorTint;
     ReorderableList thunderSFX;
 
 	void OnEnable()
@@ -109,13 +107,13 @@ public class EnviroSkyLiteEditor : Editor {
 		ambientSkyGradient = serializedObj.FindProperty ("lightSettings.ambientSkyColor");
 		ambientEquatorGradient = serializedObj.FindProperty ("lightSettings.ambientEquatorColor");
 		ambientGroundGradient = serializedObj.FindProperty ("lightSettings.ambientGroundColor");
+        lightIntensityToLumen = serializedObj.FindProperty("lightSettings.lightIntensityToLumen");
         stopRotationAtHigh = serializedObj.FindProperty("lightSettings.stopRotationAtHigh");
         rotationStopHigh = serializedObj.FindProperty("lightSettings.rotationStopHigh");
         reflectionBool = serializedObj.FindProperty ("reflectionSettings.globalReflections");
 		reflectionIntensity = serializedObj.FindProperty ("reflectionSettings.globalReflectionsIntensity");
         reflectionUpdate = serializedObj.FindProperty("reflectionSettings.globalReflectionsTimeTreshold");
         reflectionUpdatePos = serializedObj.FindProperty("reflectionSettings.globalReflectionsPositionTreshold");
-        updateDefaultEnvironmentReflections = serializedObj.FindProperty("reflectionSettings.updateDefaultEnvironmentReflections");
         globalReflectionsScale = serializedObj.FindProperty("reflectionSettings.globalReflectionsScale");
         globalReflectionsUpdateOnPosition = serializedObj.FindProperty("reflectionSettings.globalReflectionsUpdateOnPosition");
         globalReflectionsUpdateOnGameTime = serializedObj.FindProperty("reflectionSettings.globalReflectionsUpdateOnGameTime");
@@ -123,26 +121,6 @@ public class EnviroSkyLiteEditor : Editor {
         globalReflectionLayers = serializedObj.FindProperty("reflectionSettings.globalReflectionLayers");
         lightIntensityTransitionSpeed = serializedObj.FindProperty("lightSettings.lightIntensityTransitionSpeed");
         directionalLightMode = serializedObj.FindProperty("lightSettings.directionalLightMode");
-
-        //HDRP
-        lightingUpdateEachFrames = serializedObj.FindProperty("lightingUpdateEachFrames");
-        exposure = serializedObj.FindProperty("lightSettings.exposure");
-        controlSceneExposure = serializedObj.FindProperty("lightSettings.controlSceneExposure");
-        skyboxExposure = serializedObj.FindProperty("lightSettings.skyExposure");
-        lightIntensityLuxMult = serializedObj.FindProperty("lightSettings.lightIntensityLuxMult");
-        setEnviroSkybox = serializedObj.FindProperty("skySettings.setEnviroSkybox");
-        useEnviroFog = serializedObj.FindProperty("fogSettings.useEnviroGroundFog");
-        useHDRPFog = serializedObj.FindProperty("fogSettings.useHDRPFog");
-        usePhysicalBasedLighting = serializedObj.FindProperty("lightSettings.usePhysicalBasedLighting");
-        sunIntensityLux = serializedObj.FindProperty("lightSettings.sunIntensityLux");
-        moonIntensityLux = serializedObj.FindProperty("lightSettings.moonIntensityLux");
-        lightColorTemperature = serializedObj.FindProperty("lightSettings.lightColorTemperature");
-        lightColorTint = serializedObj.FindProperty("lightSettings.lightColorTint");
-        exposurePhysical = serializedObj.FindProperty("lightSettings.exposurePhysical");
-        skyExposurePhysical = serializedObj.FindProperty("lightSettings.skyExposurePhysical");
-        indirectLightingUpdateMode = serializedObj.FindProperty("lightSettings.indirectLightingUpdateMode");
-        ambientColorMod = serializedObj.FindProperty("lightSettings.ambientColorMod");
-        fogColorTint = serializedObj.FindProperty("fogSettings.fogColorTint");
         //Sky Category
         skyboxMode = serializedObj.FindProperty ("skySettings.skyboxModeLW");
 		customSkyboxMaterial = serializedObj.FindProperty ("skySettings.customSkyboxMaterial");
@@ -415,90 +393,24 @@ public class EnviroSkyLiteEditor : Editor {
 				case EnviroProfile.settingsModeLW.Lighting:
                     GUILayout.BeginVertical("", boxStyleModified);
                     EditorGUI.BeginChangeCheck();
-
-
-#if ENVIRO_HDRP                 
-                        EditorGUILayout.PropertyField(directionalLightMode, true, null);
-                        EditorGUILayout.PropertyField(lightingUpdateEachFrames, true, null);
-                        EditorGUILayout.PropertyField(indirectLightingUpdateMode, true, null);                      
-                        EditorGUILayout.PropertyField(usePhysicalBasedLighting, true, null);
-
-                        if (myTarget.lightSettings.usePhysicalBasedLighting == true)
-                        {
-                            GUILayout.Space(10);
-                            EditorGUILayout.LabelField("Light Intensity", headerStyle);
-                            EditorGUILayout.PropertyField(sunIntensityLux, true, null);
-                            EditorGUILayout.PropertyField(moonIntensityLux, true, null);
-                            EditorGUILayout.PropertyField(shadowStrength, true, null);
-                             GUILayout.Space(10);
-                            EditorGUILayout.LabelField("Light Color", headerStyle);
-                            EditorGUILayout.PropertyField(lightColorTemperature, true, null);
-                            EditorGUILayout.PropertyField(lightColorTint, true, null);
-                            EditorGUILayout.PropertyField(ambientColorMod, true, null);
-                            GUILayout.Space(10);
-                            EditorGUILayout.LabelField("Exposure Settings", headerStyle);
-
-                            EditorGUILayout.PropertyField(controlSceneExposure, true, null);
-                            
-                            if (myTarget.lightSettings.controlSceneExposure)
-                            EditorGUILayout.PropertyField(exposurePhysical, true, null);
-                            EditorGUILayout.PropertyField(skyExposurePhysical, true, null);
-                            GUILayout.Space(10);
-                            EditorGUILayout.LabelField("Current Lighting Settings:", headerStyle);
-                            EditorGUILayout.LabelField("Current Sun light intensity in LUX: " + (myTarget.lightSettings.sunIntensityLux.Evaluate(myTarget.GameTime.solarTime) * myTarget.currentLightIntensityMod).ToString(), wrapStyle);
-                            EditorGUILayout.LabelField("Current Moon light intensity in LUX: " + (myTarget.lightSettings.moonIntensityLux.Evaluate(myTarget.GameTime.lunarTime) * myTarget.currentLightIntensityMod).ToString(), wrapStyle);
-                            GUILayout.Space(5);
-                            EditorGUILayout.LabelField("Current scene exposure: " + (myTarget.lightSettings.exposurePhysical.Evaluate(myTarget.GameTime.solarTime) * myTarget.currentSceneExposureMod).ToString(), wrapStyle);
-                            EditorGUILayout.LabelField("Current sky exposure: " + (myTarget.lightSettings.skyExposurePhysical.Evaluate(myTarget.GameTime.solarTime) * myTarget.currentSkyExposureMod).ToString(), wrapStyle);
-         
-                        }
-                        else
-                        {
-                            GUILayout.Space(10);
-                            EditorGUILayout.LabelField("Light Intensity and Color", headerStyle);
-                            EditorGUILayout.PropertyField(lightColorGradient, true, null);
-                            EditorGUILayout.PropertyField(lightIntensityCurveSun, true, null);
-                            EditorGUILayout.PropertyField(lightIntensityCurveMoon, true, null);
-                            EditorGUILayout.PropertyField(shadowStrength, true, null);
-                            GUILayout.Space(10);
-                            EditorGUILayout.LabelField("Exposure Settings", headerStyle);
-                            EditorGUILayout.PropertyField(controlSceneExposure, true, null);
-                            if (myTarget.lightSettings.controlSceneExposure)
-                                EditorGUILayout.PropertyField(exposure, true, null);
-                            EditorGUILayout.PropertyField(lightIntensityLuxMult, true, null);
-                            EditorGUILayout.PropertyField(skyboxExposure, true, null);
-                             GUILayout.Space(10);
-                            EditorGUILayout.LabelField("Current Lighting Settings:", headerStyle);
-                            EditorGUILayout.LabelField("Current Sun light intensity in LUX: " + (myTarget.lightSettings.directLightSunIntensity.Evaluate(myTarget.GameTime.solarTime) * myTarget.lightSettings.lightIntensityLuxMult * 250f).ToString(), wrapStyle);
-                            EditorGUILayout.LabelField("Current Moon light intensity in LUX: " + ((myTarget.lightSettings.directLightMoonIntensity.Evaluate(myTarget.GameTime.lunarTime) * myTarget.lightSettings.lightIntensityLuxMult * 250f) * (1 - myTarget.GameTime.solarTime)).ToString(), wrapStyle);
-                            GUILayout.Space(5);
-                            EditorGUILayout.LabelField("Current scene exposure: " + myTarget.lightSettings.exposure.ToString(), wrapStyle);
-                            EditorGUILayout.LabelField("Current sky exposure: " + myTarget.lightSettings.skyExposure.ToString(), wrapStyle);
-                        } 
-#else
-
-
                     EditorGUILayout.PropertyField(directionalLightMode, true, null);
                     EditorGUILayout.PropertyField (lightColorGradient, true, null);
 					EditorGUILayout.PropertyField (lightIntensityCurveSun, true, null);
 					EditorGUILayout.PropertyField (lightIntensityCurveMoon, true, null);
                     EditorGUILayout.PropertyField(lightIntensityTransitionSpeed, true, null);
-                    EditorGUILayout.PropertyField(shadowStrength, true, null);
+#if ENVIRO_HDRP
+                    EditorGUILayout.PropertyField(lightIntensityToLumen, true, null);    
 #endif
-
+                        EditorGUILayout.PropertyField(shadowStrength, true, null);
                     EditorGUILayout.PropertyField(angleOffset, true, null);
                     EditorGUILayout.PropertyField(stopRotationAtHigh, true, null);
                     if (myTarget.lightSettings.stopRotationAtHigh)
                         EditorGUILayout.PropertyField(rotationStopHigh, true, null);
-#if ENVIRO_HDRP
-#else
                     EditorGUILayout.PropertyField (ambientMode, true, null);
 					EditorGUILayout.PropertyField (ambientIntensityCurve, true, null);
 					EditorGUILayout.PropertyField (ambientSkyGradient, true, null);
 					EditorGUILayout.PropertyField (ambientEquatorGradient, true, null);
 					EditorGUILayout.PropertyField (ambientGroundGradient, true, null);
-#endif
-
                     ApplyChanges ();
                     GUILayout.EndVertical();
                     break;
@@ -627,9 +539,6 @@ if(myTarget.skySettings.skyboxModeLW == EnviroSkySettings.SkyboxModiLW.Simple)
                         EditorGUILayout.PropertyField(reflectionBool, true, null);
                         if (myTarget.reflectionSettings.globalReflections)
                         {
-#if !ENVIRO_HDRP
-                            EditorGUILayout.PropertyField(updateDefaultEnvironmentReflections, true, null);  
-#endif        
                             GUILayout.Space(5);
                             EditorGUILayout.PropertyField(globalReflectionsUpdateOnGameTime, true, null);
                             if (myTarget.reflectionSettings.globalReflectionsUpdateOnGameTime)
@@ -640,9 +549,7 @@ if(myTarget.skySettings.skyboxModeLW == EnviroSkySettings.SkyboxModiLW.Simple)
                             GUILayout.Space(5);
                             EditorGUILayout.PropertyField(reflectionIntensity, true, null);
                             EditorGUILayout.PropertyField(globalReflectionsScale, true, null);
-#if !ENVIRO_HDRP
                             EditorGUILayout.PropertyField(globalReflectionResolution, true, null);
-#endif
                             EditorGUILayout.PropertyField(globalReflectionLayers, true, null);
                             
                         }
@@ -676,14 +583,10 @@ if(myTarget.skySettings.skyboxModeLW == EnviroSkySettings.SkyboxModiLW.Simple)
 				case EnviroProfile.settingsModeLW.Fog:
                         GUILayout.BeginVertical("", boxStyleModified);
                         EditorGUI.BeginChangeCheck ();
-#if ENVIRO_HDRP
-                        EditorGUILayout.PropertyField(useHDRPFog, true, null);
-                        EditorGUILayout.PropertyField(fogColorTint, true, null);
-#else
-                        EditorGUILayout.PropertyField(useUnityFog, true, null);
-                        if (!myTarget.fogSettings.useUnityFog)
+                    EditorGUILayout.PropertyField(useUnityFog, true, null);
+                     if (!myTarget.fogSettings.useUnityFog)
                             EditorGUILayout.PropertyField(useSimpleFog, true, null);
-                        EditorGUILayout.PropertyField (fogmode, true, null);
+                    EditorGUILayout.PropertyField (fogmode, true, null);
                         if (!myTarget.fogSettings.useUnityFog)
                         {
                             EditorGUILayout.PropertyField(distanceFog, true, null);
@@ -715,9 +618,7 @@ if(myTarget.skySettings.skyboxModeLW == EnviroSkySettings.SkyboxModiLW.Simple)
                         {
                             EditorGUILayout.PropertyField(simpleFogColor, true, null);                            
                         }
-#endif
-					    ApplyChanges ();
-
+					ApplyChanges ();
                         GUILayout.EndVertical();
                         break;
 
@@ -765,9 +666,9 @@ if(myTarget.skySettings.skyboxModeLW == EnviroSkySettings.SkyboxModiLW.Simple)
 						myTarget.satelliteSettings.additionalSatellites [i].name = EditorGUILayout.TextField ("Name", myTarget.satelliteSettings.additionalSatellites [i].name);
 						GUILayout.Space (10);
 						myTarget.satelliteSettings.additionalSatellites [i].prefab = (GameObject)EditorGUILayout.ObjectField ("Prefab", myTarget.satelliteSettings.additionalSatellites [i].prefab, typeof(GameObject), false);
-                            myTarget.satelliteSettings.additionalSatellites[i].xRot = EditorGUILayout.Slider("XRot", myTarget.satelliteSettings.additionalSatellites[i].xRot, 0f, 360f);
-                            myTarget.satelliteSettings.additionalSatellites[i].yRot = EditorGUILayout.Slider("YRot", myTarget.satelliteSettings.additionalSatellites[i].yRot, 0f, 360f);
-                            myTarget.satelliteSettings.additionalSatellites[i].zRot = EditorGUILayout.Slider("ZRot", myTarget.satelliteSettings.additionalSatellites[i].zRot, 0f, 360f);
+						myTarget.satelliteSettings.additionalSatellites [i].orbit = EditorGUILayout.Slider ("OrbitDistance", myTarget.satelliteSettings.additionalSatellites [i].orbit,0f,myTarget.transform.localScale.y);
+						myTarget.satelliteSettings.additionalSatellites [i].xRot = EditorGUILayout.Slider ("XRot", myTarget.satelliteSettings.additionalSatellites [i].xRot,0f,360f);
+						myTarget.satelliteSettings.additionalSatellites [i].yRot = EditorGUILayout.Slider ("YRot", myTarget.satelliteSettings.additionalSatellites [i].yRot,0f,360f);
 						if (GUILayout.Button ("Remove")) 
 						{
 							myTarget.satelliteSettings.additionalSatellites.Remove (myTarget.satelliteSettings.additionalSatellites [i]);

@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mountSocket: {fileID: 469216}
   characterSocket: 3
-  riderAnimation: Mount
+  riderAnimation: Horse
   idleAnimation: {fileID: 0}
   walkAnimation: {fileID: 0}
   runAnimation: {fileID: 0}
@@ -1110,6 +1110,7 @@ MonoBehaviour:
   landAnimationSpeed: 1
   runThreshold: 2.5
   speed: 0
+  mc3d: {fileID: 0}
 --- !u!143 &14360518
 CharacterController:
   m_ObjectHideFlags: 0

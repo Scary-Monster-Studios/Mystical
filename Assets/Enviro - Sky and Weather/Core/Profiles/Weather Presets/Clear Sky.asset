@@ -54,7 +54,7 @@ MonoBehaviour:
     particleCloudsOverwrite: 0
   fogStartDistance: 0
   fogDistance: 5000
-  fogDensity: 0.000005
+  fogDensity: 0.00005
   weatherSkyMod:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
     key0: {r: 0, g: 0, b: 0, a: 0.96862745}
     key1: {r: 0, g: 0, b: 0, a: 0.53333336}
     key2: {r: 0.68235296, g: 0.7058824, b: 0.88235295, a: 0.32156864}
-    key3: {r: 0.42352942, g: 0.54901963, b: 0.7490196, a: 0.29411766}
+    key3: {r: 0.42352942, g: 0.54901963, b: 0.7490196, a: 0.30588236}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
@@ -142,12 +142,12 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 4
-  volumeLightIntensity: 0.5
+  volumeLightIntensity: 0.2
   shadowIntensityMod: 0
   heightFogDensity: 0
-  SkyFogHeight: 0.45
-  skyFogStart: 0.2
-  SkyFogIntensity: 0.09
+  SkyFogHeight: 5
+  skyFogStart: 0.02
+  SkyFogIntensity: 0.2
   FogScatteringIntensity: 1.25
   fogSunBlocking: 1
   moonIntensity: 1
@@ -157,8 +157,7 @@ MonoBehaviour:
   snowLevel: 0
   temperatureLevel: 0
   isLightningStorm: 0
-  lightningInterval: 2
-  auroraIntensity: 0
+  lightningInterval: 10
   weatherSFX: {fileID: 0}
   SpringDayAmbient: {fileID: 8300000, guid: 9e4f9b704d4c6a545863111b7ab9bb51, type: 3}
   SpringNightAmbient: {fileID: 8300000, guid: 421815712ee5317449eeef6d06fac4a3, type: 3}
@@ -171,6 +170,3 @@ MonoBehaviour:
   blurDistance: 1006
   blurIntensity: 0.497
   blurSkyIntensity: 5
-  sceneExposureMod: 1
-  skyExposureMod: 1
-  lightIntensityMod: 1

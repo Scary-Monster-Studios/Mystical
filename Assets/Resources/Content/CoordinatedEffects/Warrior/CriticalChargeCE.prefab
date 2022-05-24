@@ -1,0 +1,256 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 114000011976490116}
+  - component: {fileID: 114000011184825362}
+  - component: {fileID: 114000010704808704}
+  - component: {fileID: 114000011995202200}
+  - component: {fileID: 114000013344423912}
+  - component: {fileID: 114003064970603690}
+  m_Layer: 0
+  m_Name: CriticalChargeCE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.96, z: -1.9099998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114000011976490116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da3892722b944540b5d4ccbedb7f238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  activationDelay: 0
+  duration: 1.5
+  destroyWhenFinished: 0
+  restTime: 10
+  showTrail: 1
+  hideTrail: 1
+  hideTime: 1.7
+  DucTrail: 1
+  lookAtTarget: 1
+  interruptCanTerminateCoordEffect: 1
+  mainSlotMoveToRest: None
+  moveAllWeaponSlotToRest: 0
+  slotMoveFromRestToMain: Main Hand
+--- !u!114 &114000011184825362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5774ecf25b688a4c9dd833d2ffe98c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  activationDelay: 0.3
+  duration: 1
+  destroyWhenFinished: 0
+  slot: Root
+  particleObject: {fileID: 0}
+  particleObjectList:
+  - {fileID: 1000010479089408, guid: d215e92e5d99b744c87b85d6b0d048fe, type: 3}
+  particle: {fileID: 0}
+  particleList: []
+  genderIds: 
+  genderClips: []
+  soundClip: []
+  soundClipFemale: []
+  soundClip3D: 1
+  soundVolume: 1
+  mixerGroupName: SFX
+  maxDistance: 100
+  linear: 1
+  parentSlot: 1
+  highFromColider: 0
+  emiterRadiusResize: 0
+  hitLookAt: 0
+  ignoreOverrideLength: 0
+  interruptCanTerminateCoordEffect: 1
+--- !u!114 &114000010704808704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c6fc50a7bbc8e4f85a25bc0fe0e5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  activationDelay: 0
+  duration: 1.5
+  destroyWhenFinished: 1
+  lockMove: 1.5
+  moveCharacter: 1
+  moveSpeed: 3
+  duringTime: 1
+  activationMoveDelay: 0.6
+  jumpCharacter: 0
+  activationJumpDelay: 0
+  interruptCanTerminateCoordEffect: 1
+--- !u!114 &114000011995202200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5774ecf25b688a4c9dd833d2ffe98c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 1
+  activationDelay: 0.8
+  duration: 1
+  destroyWhenFinished: 0
+  slot: Root
+  particleObject: {fileID: 0}
+  particleObjectList:
+  - {fileID: 1000010374508408, guid: ca2c60d8125a6914bbb6b6181b6f9864, type: 3}
+  particle: {fileID: 0}
+  particleList: []
+  genderIds: 
+  genderClips: []
+  soundClip: []
+  soundClipFemale: []
+  soundClip3D: 1
+  soundVolume: 1
+  mixerGroupName: SFX
+  maxDistance: 100
+  linear: 1
+  parentSlot: 1
+  highFromColider: 0
+  emiterRadiusResize: 0
+  hitLookAt: 0
+  ignoreOverrideLength: 0
+  interruptCanTerminateCoordEffect: 1
+--- !u!114 &114000013344423912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5774ecf25b688a4c9dd833d2ffe98c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 1
+  activationDelay: 1.5
+  duration: 1
+  destroyWhenFinished: 0
+  slot: Root
+  particleObject: {fileID: 0}
+  particleObjectList:
+  - {fileID: 1000014014637794, guid: 6829423fdc09a6248b804036a9fb46e0, type: 3}
+  particle: {fileID: 0}
+  particleList: []
+  genderIds: 
+  genderClips: []
+  soundClip: []
+  soundClipFemale: []
+  soundClip3D: 1
+  soundVolume: 1
+  mixerGroupName: SFX
+  maxDistance: 100
+  linear: 1
+  parentSlot: 1
+  highFromColider: 0
+  emiterRadiusResize: 0
+  hitLookAt: 0
+  ignoreOverrideLength: 0
+  interruptCanTerminateCoordEffect: 1
+--- !u!114 &114003064970603690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5025da6d01e1194bafb4c33cf6408ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  activationDelay: 0
+  duration: 2.2
+  destroyWhenFinished: 0
+  objectType: 2
+  coordAnimationType: 1
+  animationType: 0
+  animationName: Attack
+  animationClip: {fileID: 0}
+  animationFloatValue: 0
+  animationFloatValueAfter: 0
+  animationIntValue: 0
+  animationIntValueAfter: 0
+  animationLength: 1
+  genderIds: 00000000
+  genderClips:
+  - soundClip:
+    - {fileID: 8300000, guid: 0262b77f9d0c821458b231cec7831e51, type: 3}
+  soundClip:
+  - {fileID: 8300000, guid: 0262b77f9d0c821458b231cec7831e51, type: 3}
+  soundClipFemale:
+  - {fileID: 8300000, guid: 0262b77f9d0c821458b231cec7831e51, type: 3}
+  soundClip3D: 1
+  soundVolume: 1
+  soundDelay: 0
+  loopSound: 0
+  soundRepeatTime: 0
+  mixerGroupName: SFX
+  maxDistance: 100
+  linear: 1
+  slot: Root
+  additionalSlotY: 0
+  particle: {fileID: 0}
+  particleDelay: 0
+  loopParticle: 0
+  particleRepeatTime: 0
+  attachParticleToSocket: 1
+  interruptWhenMoving: 0
+  hideWeapons: 0
+  hideTime: 0
+  lookAtTarget: 0
+  particleObjectList: []
+  ignoreOverrideLength: 0
+  onMount: 0
+  interruptCanTerminateCoordEffect: 1

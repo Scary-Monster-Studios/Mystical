@@ -273,7 +273,6 @@ public class EnviroSkyMgr : MonoBehaviour {
             inst.SetActive(false);
             currentEnviroSkyVersion = EnviroSkyVersion.None;
 #if UNITY_EDITOR
-        if (!Application.isPlaying)
             UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene());
 #endif
         }
@@ -295,7 +294,6 @@ public class EnviroSkyMgr : MonoBehaviour {
             inst.SetActive(false);
             currentEnviroSkyVersion = EnviroSkyVersion.None;
 #if UNITY_EDITOR
-         if (!Application.isPlaying)
             UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene());
 #endif
         }
@@ -317,7 +315,6 @@ public class EnviroSkyMgr : MonoBehaviour {
             inst.SetActive(false);
             currentEnviroSkyVersion = EnviroSkyVersion.None;
 #if UNITY_EDITOR
-         if (!Application.isPlaying)
             UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene());
 #endif
         }

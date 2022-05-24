@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &105128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419844}
+  - component: {fileID: 827189343069566610}
+  m_Layer: 0
+  m_Name: UmaMage02Boots 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1026.4293, y: 328.55307, z: 4.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &827189343069566610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b06434b5506f043a83774757473ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipDisplayType: 3
+  modelName: 
+  model: {fileID: 105128, guid: d73205afae58ed446950a6c811015b15, type: 3}
+  material: {fileID: 0}
+  raceIds: 16000000
+  raceDef:
+  - raceId: 22
+    name: Human
+    GearParts: []
+    GearPartsName: []
+    disableGearParts: []
+    disableGearPartsName: []
+    aspectIds: 00000000
+    aspectDef:
+    - aspectId: 0
+      name: Any
+      GearParts: []
+      GearPartsName: []
+      disableGearParts: []
+      disableGearPartsName: []
+      genderIds: 9d0100009e010000
+      genderDef:
+      - ganderId: 413
+        name: Male
+        model: {fileID: 0}
+        GearParts:
+        - {fileID: 0}
+        GearPartsName:
+        - Mage1_Boots
+        disableGearParts: []
+        disableGearPartsName: []
+        slot: []
+        slotDef: []
+      - ganderId: 414
+        name: Female
+        model: {fileID: 0}
+        GearParts:
+        - {fileID: 0}
+        GearPartsName:
+        - Human1_Boots
+        disableGearParts: []
+        disableGearPartsName: []
+        slot: []
+        slotDef: []
+  overrideSlot: None
+  useRestSlot: 0
+  defaultRestSlot: 0
+  restPosition: {x: 0, y: 0, z: 0}
+  restRotation: {x: 0, y: 0, z: 0}
+  gearType: 0
+  maleModel: {fileID: 0}
+  femaleModel: {fileID: 0}
+  headDisables: 0
+  shoulderDisables: 0
+  GearParts: []
+  FemaleGearParts: []
+  RaceDisplayItem: []
+  ShaderToReplace: {fileID: 0}
+  ReplacementShader: {fileID: 0}
+  MaterialToReplace: {fileID: 0}
+  ReplacementMaterial: {fileID: 0}

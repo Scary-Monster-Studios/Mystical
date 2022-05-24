@@ -75,11 +75,6 @@ public class DemoUI : MonoBehaviour {
         EnviroSkyMgr.instance.ambientAudioVolume = value;
 	}
 
-	public void SetTimeOfDay (float value)
-	{
-        EnviroSkyMgr.instance.SetTimeOfDay(value);
-	}
-
 	public void ChangeWeatherVolume (float value)
 	{
         EnviroSkyMgr.instance.weatherAudioVolume = value;
@@ -181,7 +176,7 @@ public class DemoUI : MonoBehaviour {
             if(EnviroSkyMgr.instance.GetCurrentWeatherPreset() != null)
         weatherText.text = EnviroSkyMgr.instance.GetCurrentWeatherPreset().Name;
 
-        temperatureText.text = EnviroSkyMgr.instance.GetCurrentTemperatureString();
+            temperatureText.text = EnviroSkyMgr.instance.GetCurrentTemperatureString();
     }
 
 	void LateUpdate ()

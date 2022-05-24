@@ -1,4 +1,4 @@
-Enviro - Sky and Weather 2.4.1
+Enviro - Sky and Weather 2.3.1
 
 Thanks for buying Enviro! 
 
@@ -615,70 +615,3 @@ v 2.3.1
 	* Some small optimizations in volume clouds raymarch shader.
 	* Optimizations for time slice rendered reflection probes.
 	* More work for upcoming HDRP support.
-
-
-v 2.3.1
-	* Added the correct moon texture for enviro lite version.
-	* Reworked volume clouds nosie textures. Should look a bit better now!
-	* More work for upcoming HDRP support.
-
-v 2.3.2
-	* Fixed Enviro URP support for URP 10+.
-	* Fixed issue with stars/galaxy blending with moon.
-	* Fixed clouds rendering single pass instanced mode in new plugin xr system. (Builtin and URP)
-	* Fixed XR singlepass instanced issue in lite fog rendering.
-	* Fixed possible errors from post processing effects in URP.
-	* Fixed issues with materials lost in URP.
-	* Fixed an issue with fog missing when changing scenes in URP.
-	* Rewritten clouds and distance blur rendering scripts in URP.
-	* Fixed an issue with skybox not showing correctly when additional load scenes.
-	* Fixed possible issue where volume clouds not blending with sky in builtin and urp. (Missing alpha channel of generated default render textures)
-	* Fixed issues with new Unity UI system.
-	* Fixed weather zone gizmo not show the rotation of weather zone object.
-	* Changed URP setup. You no longer need to import a package.
-	* Updated MicroSplat Integration. 
-	* Added optimized VSP integration script based on work from Enviro user Meishin.
-
-v 2.3.3
-	* Fixed issue with spot and point light volumetric lighting without shadows in Unity 2019.2 singlepass rendering.
-	* Fixed issue with volumetric lighting not working correctly like in 2.3.1.
-	* Fixed issue in dual lighting mode. Moon intensity will be set correctly now.
-	* Fixed singlepass instanced rendering for clouds in URP. Included wrong script...
-	* Fixed missing shadow intensity curve in Enviro Sky inspector.
-	* Fixed curl noise option in Volumetric Clouds.
-
-v 2.4.0
-	* Added HDRP support for standard and lite:
-	    Currently no HDRP VR and MSAA support for Enviro post processing effects.
-		Depth Blending for volumetric clouds will be added very soon in 2.4.1
-	* Added option to update the default environment reflection cubemap with the texture of global reflection probe. (For instanced indirect rendered material reflections)
-	* Added a new list for additional cameras for URP and HDRP. You need to add your cameras here if your want to render Enviro effects on these.
-	* Added Enviro clouds shadow cookies for latest URP versions.
-	* Fixed URP 10+ singlepass instanced rendering.(grey eye)
-	* Fixed multiple issues with volumetric ligting singlepass instanced rendering.
-	* Fixed volumetric lighting may dissapear when no shadows are rendered.
-	* Fixed custom mesh weather zone gizmos.
-	* Fixed cirrus clouds alpha in Unity 2020+.
-	* Fixed warnings related to Enviro in URP and HDRP.
-	* Fixed wetness update for microsplat integration.
-	* Fixed OnDay/OnNight event not triggered on start.
-	* Fixed issue with duplicates of SFX Effects are created when instances get deactivated and activated again.
-	* Fixed possible stuttering in clouds movement.
-	* Fixed additional satellites render in URP.
-	* Fixed bad performance for Aura 2 integration code in larger scenes.
-	* New sample scenes for all render pipelines.
-
-v 2.4.0a
-
-	* Fixed distance blur effect in URP.
-	* Improved code in HDRP support that should result in better performance in big scenes.
-
-v 2.4.1
-
-	* Fixed possible errors that could break builds.
-	* Fixed possible issue with hourly time event on start. (It should trigger the event now correctly in all cases)
-	* Fixed issue with default environment reflection not updating when using don't destroy on load. 
-	* Fixed issue with simple sky mode in URP.
-	* Fixed issue with volumetric clouds not rendering correctly in scene and reflection cameras in URP SPI VR.
-	* Fixed compile issue in URP 11 and cloud shadow light cookie.
-	* Fixed small issue in built-in standard sample scene.

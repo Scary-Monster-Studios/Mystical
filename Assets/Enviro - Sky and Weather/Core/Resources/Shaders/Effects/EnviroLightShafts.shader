@@ -3,18 +3,15 @@
 Shader "Enviro/Effects/LightShafts" {
 	Properties{
 		_MainTex("Base", Any) = "" {}
-		_ColorBuffer("Color", Any) = "" {}
-		_Skybox("Skybox", Any) = "" {}
+	_ColorBuffer("Color", Any) = "" {}
+	_Skybox("Skybox", Any) = "" {}
 	}
 
-	CGINCLUDE
-
+		CGINCLUDE
 
 #include "UnityCG.cginc"
-#pragma multi_compile __ ENVIROURP
 
-	struct v2f 
-	{
+		struct v2f {
 		float4 pos : SV_POSITION;
 		float2 uv : TEXCOORD0;
 #if UNITY_UV_STARTS_AT_TOP
@@ -23,8 +20,7 @@ Shader "Enviro/Effects/LightShafts" {
 		UNITY_VERTEX_OUTPUT_STEREO
 	};
 
-	struct v2f_radial 
-	{
+	struct v2f_radial {
 		float4 pos : SV_POSITION;
 		float2 uv : TEXCOORD0;
 		float2 blurVector : TEXCOORD1;
@@ -34,9 +30,11 @@ Shader "Enviro/Effects/LightShafts" {
 	UNITY_DECLARE_SCREENSPACE_TEXTURE(_MainTex);
 	UNITY_DECLARE_SCREENSPACE_TEXTURE(_ColorBuffer);
 	UNITY_DECLARE_SCREENSPACE_TEXTURE(_Skybox);
+	//sampler2D_float _CameraDepthTexture;
 	UNITY_DECLARE_DEPTH_TEXTURE(_CameraDepthTexture);
 
 	uniform half4 _SunThreshold;
+
 	uniform half4 _SunColor;
 	uniform half4 _BlurRadius4;
 	uniform half4 _SunPosition;
@@ -46,29 +44,19 @@ Shader "Enviro/Effects/LightShafts" {
 	half4 _Skybox_ST;
 	half4 _CameraDepthTexture_ST;
 
-	#define SAMPLES_FLOAT 6.0f
-	#define SAMPLES_INT 6
 
-	v2f vert(appdata_img v) 
-	{
+#define SAMPLES_FLOAT 6.0f
+#define SAMPLES_INT 6
+
+	v2f vert(appdata_img v) {
 		v2f o;
-		UNITY_SETUP_INSTANCE_ID(v); 
-		UNITY_INITIALIZE_OUTPUT(v2f, o); 
-		UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); 
-		
-	#if defined(ENVIROURP)
-		o.pos = float4(v.vertex.xyz,1.0);
-	#if UNITY_UV_STARTS_AT_TOP
-		o.pos.y *= -1;
-	#endif
-	#else
+		UNITY_SETUP_INSTANCE_ID(v); //Insert
+		UNITY_INITIALIZE_OUTPUT(v2f, o); //Insert
+		UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Ins
 		o.pos = UnityObjectToClipPos(v.vertex);
-	#endif
-
 		o.uv = v.texcoord.xy;
-	
 
-#if UNITY_UV_STARTS_AT_TOP 
+#if UNITY_UV_STARTS_AT_TOP
 		o.uv1 = v.texcoord.xy;
 		if (_MainTex_TexelSize.y < 0)
 			o.uv1.y = 1 - o.uv1.y;
@@ -80,7 +68,7 @@ Shader "Enviro/Effects/LightShafts" {
 	half4 fragScreen(v2f i) : SV_Target{
 		UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 	half4 colorA = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, UnityStereoScreenSpaceUVAdjust(i.uv.xy, _MainTex_ST));
-#if  UNITY_UV_STARTS_AT_TOP
+#if UNITY_UV_STARTS_AT_TOP
 	half4 colorB = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_ColorBuffer, UnityStereoScreenSpaceUVAdjust(i.uv1.xy, _ColorBuffer_ST));
 #else
 	half4 colorB = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_ColorBuffer, UnityStereoScreenSpaceUVAdjust(i.uv.xy, _ColorBuffer_ST));
@@ -89,7 +77,7 @@ Shader "Enviro/Effects/LightShafts" {
 	return 1.0f - (1.0f - colorA) * (1.0f - depthMask);
 	}
 
-	half4 fragAdd(v2f i) : SV_Target{
+		half4 fragAdd(v2f i) : SV_Target{
 		UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 	half4 colorA = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, UnityStereoScreenSpaceUVAdjust(i.uv.xy, _MainTex_ST));
 #if UNITY_UV_STARTS_AT_TOP
@@ -103,21 +91,15 @@ Shader "Enviro/Effects/LightShafts" {
 
 		v2f_radial vert_radial(appdata_img v) {
 		v2f_radial o;
-		UNITY_SETUP_INSTANCE_ID(v); 
-		UNITY_INITIALIZE_OUTPUT(v2f_radial, o); 
-		UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); 
-
-	#if defined(ENVIROURP) 
-		o.pos = float4(v.vertex.xyz,1.0);
-	#if UNITY_UV_STARTS_AT_TOP
-		o.pos.y *= -1;
-	#endif
-	#else
+		UNITY_SETUP_INSTANCE_ID(v); //Insert
+		UNITY_INITIALIZE_OUTPUT(v2f_radial, o); //Insert
+		UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Ins
 		o.pos = UnityObjectToClipPos(v.vertex);
-	#endif
 
 		o.uv.xy = v.texcoord.xy;
+
 		o.blurVector = (_SunPosition.xy - v.texcoord.xy) * _BlurRadius4.xy;
+
 		return o;
 	}
 
@@ -135,7 +117,7 @@ Shader "Enviro/Effects/LightShafts" {
 	}
 
 
-	half TransformColor(half4 skyboxValue)
+		half TransformColor(half4 skyboxValue)
 	{
 		return dot(max(skyboxValue.rgb - _SunThreshold.rgb, half3(0, 0, 0)), half3(1, 1, 1)); //threshold and convert to greyscale
 	}

@@ -140,7 +140,7 @@ Shader "Enviro/Lite/SkyboxSimple"
 
 					float4 moonSampler = tex2D(_MoonTex, i.moonPos.xy);
 					float alpha = MoonPhaseFactor(i.moonPos.xy, _moonParams.w);
-					float3 moonArea = clamp(moonSampler * 10, 0, 1) * i.moonPos.z;
+					float3 moonArea = clamp(moonSampler * 10, 0, 1);
 					moonSampler = lerp(float4(0, 0, 0, 0), moonSampler, alpha);
 					moonSampler = (moonSampler * _MoonColor) * 2;
 					float starsBehindMoon = 1 - clamp((moonArea * 5), 0, 1);
@@ -151,6 +151,7 @@ Shader "Enviro/Lite/SkyboxSimple"
 
 					if (y < 50.0 && y > 5.0)
 						skyColor = _HorizonColor;
+
 
 					skyColor = skyColor + (1 - skyColor.a) * nightSky;
 			
@@ -169,7 +170,7 @@ Shader "Enviro/Lite/SkyboxSimple"
             ENDCG
         }
 
-			//Cirrus Clouds
+		//Cirrus Clouds
 			Pass
 			{
 			Blend SrcAlpha OneMinusSrcAlpha
@@ -249,7 +250,6 @@ Shader "Enviro/Lite/SkyboxSimple"
 			}
 				ENDCG
 			}
-		
 
 
 			//Flat Clouds
@@ -378,5 +378,5 @@ Shader "Enviro/Lite/SkyboxSimple"
 			}
 
     }
-    FallBack Off
+    FallBack "None"
 }

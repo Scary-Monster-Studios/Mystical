@@ -49,6 +49,7 @@ public class EnviroReflectionProbe : MonoBehaviour
     private Material bakeMat = null;
     private Material convolutionMat;
     private Coroutine refreshing;
+    private bool paused = false;
 
     private int renderID;
 
@@ -212,6 +213,7 @@ public class EnviroReflectionProbe : MonoBehaviour
                     eSky.customRenderingSettings.useVolumeClouds = EnviroSkyMgr.instance.useVolumeClouds;
                     eSky.customRenderingSettings.useFog = useFog;
                 }
+
             }
 #endif
 
@@ -323,7 +325,7 @@ public class EnviroReflectionProbe : MonoBehaviour
 
         if (customRendering)
         {
-            if (rendering == true)
+            if (rendering == true || paused)
                 return;
 
             CreateTexturesAndMaterial();
@@ -348,7 +350,7 @@ public class EnviroReflectionProbe : MonoBehaviour
                 refreshing = StartCoroutine(RefreshInstant(renderTexture, mirrorTexture));
             }
         }
-        else
+        else if (!paused)
         {
           if(hdprobe != null)
              hdprobe.RequestRenderNextUpdate();
@@ -356,7 +358,7 @@ public class EnviroReflectionProbe : MonoBehaviour
 #else
         if (customRendering)
         {
-            if (rendering == true)
+            if (rendering == true || paused)
                 return;
 
             CreateTexturesAndMaterial();
@@ -381,10 +383,9 @@ public class EnviroReflectionProbe : MonoBehaviour
                 refreshing = StartCoroutine(RefreshInstant(renderTexture, mirrorTexture));
             }
         } 
-        else
+        else if (!paused)
         {
-            //myProbe.RenderProbe();
-            StartCoroutine(RefreshUnity());
+                StartCoroutine(RefreshUnity());
         }
 #endif
     }
@@ -412,17 +413,13 @@ public class EnviroReflectionProbe : MonoBehaviour
         {
             renderCam.transform.rotation = orientations[face];
             renderCam.Render();
-
-            if(mirrorTex != null)
-            {
-                Graphics.Blit(renderTex, mirrorTex, mirror);
-                Graphics.CopyTexture(mirrorTex, 0, 0, cubemap, face, 0);   
-            }   
+            Graphics.Blit(renderTex, mirrorTex, mirror);
+            Graphics.CopyTexture(mirrorTex, 0, 0, cubemap, face, 0);      
         }
 
         ConvolutionCubemap();
 #if ENVIRO_HDRP
-        hdprobe.SetTexture(ProbeSettings.Mode.Custom, finalCubemap);
+            hdprobe.SetTexture(ProbeSettings.Mode.Custom, finalCubemap);
 #else
         myProbe.customBakedTexture = finalCubemap;
 #endif
@@ -441,13 +438,9 @@ public class EnviroReflectionProbe : MonoBehaviour
             yield return null;
             // print("Bake Face " + face.ToString());
             renderCam.transform.rotation = orientations[face];      
-            renderCam.Render();
-
-            if(mirrorTex != null)
-            {         
-                Graphics.Blit(renderTex, mirrorTex, mirror);
-                Graphics.CopyTexture(mirrorTex, 0, 0, cubemap, face, 0);
-            }
+            renderCam.Render();             
+            Graphics.Blit(renderTex, mirrorTex, mirror);
+            Graphics.CopyTexture(mirrorTex, 0, 0, cubemap, face, 0);
             //ClearTextures();           
         }
 

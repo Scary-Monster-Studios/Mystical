@@ -249,11 +249,6 @@ public class EnviroWeatherPreset : ScriptableObject
     public float blurIntensity = 1f;
     public float blurSkyIntensity = 1f;
 
-	//HDRP
-	public float sceneExposureMod = 1f;
-	public float skyExposureMod = 1f;
-	public float lightIntensityMod = 1f;
-
     // Aura 2 Integration
 #if AURA_IN_PROJECT
     public EnviroAura2Config enviroAura2Config;

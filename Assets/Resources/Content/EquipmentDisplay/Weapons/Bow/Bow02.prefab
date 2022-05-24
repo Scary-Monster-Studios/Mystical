@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &124760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429564}
+  - component: {fileID: 11401328}
+  m_Layer: 0
+  m_Name: Bow02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124760}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.96, z: -1.9099998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11401328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b06434b5506f043a83774757473ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipDisplayType: 0
+  modelName: Bow02
+  model: {fileID: 140592, guid: 611ff9f2823273f49b90502ea7f2d6e3, type: 3}
+  material: {fileID: 0}
+  raceIds: 000000008f000000
+  raceDef:
+  - raceId: 0
+    name: Any
+    GearParts: []
+    GearPartsName: []
+    disableGearParts: []
+    disableGearPartsName: []
+    aspectIds: 00000000
+    aspectDef:
+    - aspectId: 0
+      name: Any
+      GearParts: []
+      GearPartsName: []
+      disableGearParts: []
+      disableGearPartsName: []
+      genderIds: 9d0100009e010000
+      genderDef:
+      - ganderId: 413
+        name: Male
+        model: {fileID: 0}
+        GearParts: []
+        GearPartsName: []
+        disableGearParts: []
+        disableGearPartsName: []
+        slot:
+        - Main Hand
+        - Off Hand
+        slotDef:
+        - position: {x: 0.075, y: 0.02, z: 0.004}
+          rotation: {x: -69.423, y: 24.904, z: -54.982}
+          scale: {x: 1, y: 1, z: 1}
+          restPosition: {x: 0.067, y: 0.2, z: -0.024}
+          restRotation: {x: 74.222, y: -67.335, z: 103.263}
+          restScale: {x: 1, y: 1, z: 1}
+        - position: {x: 0.1045, y: -0.0065, z: 0.0276}
+          rotation: {x: -61.153, y: 85.09, z: -120.888}
+          scale: {x: 1, y: 1, z: 1}
+          restPosition: {x: -0.1, y: 0.1, z: 0.035}
+          restRotation: {x: -61.459, y: 110.562, z: -122.966}
+          restScale: {x: 1, y: 1, z: 1}
+      - ganderId: 414
+        name: Female
+        model: {fileID: 0}
+        GearParts: []
+        GearPartsName: []
+        disableGearParts: []
+        disableGearPartsName: []
+        slot:
+        - Main Hand
+        - Off Hand
+        slotDef:
+        - position: {x: 0.0966, y: 0.0067, z: 0.0037}
+          rotation: {x: -68.325, y: 37.596, z: -63.681}
+          scale: {x: 1, y: 1, z: 1}
+          restPosition: {x: -0.048, y: 0.205, z: 0.017}
+          restRotation: {x: 14.194, y: 94.459, z: 67.682}
+          restScale: {x: 1, y: 1, z: 1}
+        - position: {x: 0.079, y: 0.022, z: 0.025}
+          rotation: {x: 73.322, y: 54.009, z: 46.551}
+          scale: {x: 1, y: 1, z: 1}
+          restPosition: {x: -0.084, y: 0.157, z: -0.034}
+          restRotation: {x: -46.492, y: 74.441, z: 58.651}
+          restScale: {x: 1, y: 1, z: 1}
+  - raceId: 143
+    name: Orc
+    GearParts: []
+    GearPartsName: []
+    disableGearParts: []
+    disableGearPartsName: []
+    aspectIds: 00000000
+    aspectDef:
+    - aspectId: 0
+      name: Any
+      GearParts: []
+      GearPartsName: []
+      disableGearParts: []
+      disableGearPartsName: []
+      genderIds: 9d0100009e010000
+      genderDef:
+      - ganderId: 413
+        name: Male
+        model: {fileID: 0}
+        GearParts: []
+        GearPartsName: []
+        disableGearParts: []
+        disableGearPartsName: []
+        slot:
+        - Main Hand
+        - Off Hand
+        slotDef:
+        - position: {x: 0.019, y: 0.01, z: -0.033}
+          rotation: {x: -65.226, y: 72.174, z: -89.618}
+          scale: {x: 1, y: 1, z: 1}
+          restPosition: {x: 0.027, y: 0.184, z: -0.053}
+          restRotation: {x: 67.2, y: -98.134, z: 64.634}
+          restScale: {x: 1, y: 1, z: 1}
+        - position: {x: 0.023, y: 0.007, z: 0.013}
+          rotation: {x: -61.153, y: 85.09, z: -120.888}
+          scale: {x: 1, y: 1, z: 1}
+          restPosition: {x: -0.062, y: 0.156, z: -0.046}
+          restRotation: {x: -111.346, y: -112.407, z: 77.196}
+          restScale: {x: 1, y: 1, z: 1}
+      - ganderId: 414
+        name: Female
+        model: {fileID: 0}
+        GearParts: []
+        GearPartsName: []
+        disableGearParts: []
+        disableGearPartsName: []
+        slot:
+        - Main Hand
+        - Off Hand
+        slotDef:
+        - position: {x: 0.0444, y: 0.0084, z: -0.0089}
+          rotation: {x: -68.325, y: 37.596, z: -63.681}
+          scale: {x: 1, y: 1, z: 1}
+          restPosition: {x: -0.034, y: 0, z: -0.077}
+          restRotation: {x: 14.488, y: 82.707, z: 53.079}
+          restScale: {x: 1, y: 1, z: 1}
+        - position: {x: 0.006, y: 0.032, z: 0.016}
+          rotation: {x: 73.322, y: 54.009, z: 46.551}
+          scale: {x: 1, y: 1, z: 1}
+          restPosition: {x: -0.066, y: -0.084, z: -0.016}
+          restRotation: {x: -44.37, y: 86.959, z: 47.311}
+          restScale: {x: 1, y: 1, z: 1}
+  overrideSlot: Off Hand
+  useRestSlot: 1
+  defaultRestSlot: 0
+  restPosition: {x: 0, y: 0, z: 0}
+  restRotation: {x: 0, y: 0, z: 0}
+  gearType: 1
+  maleModel: {fileID: 0}
+  femaleModel: {fileID: 0}
+  headDisables: 0
+  shoulderDisables: 0
+  GearParts: []
+  FemaleGearParts: []
+  RaceDisplayItem: []
+  ShaderToReplace: {fileID: 0}
+  ReplacementShader: {fileID: 0}
+  MaterialToReplace: {fileID: 0}
+  ReplacementMaterial: {fileID: 0}

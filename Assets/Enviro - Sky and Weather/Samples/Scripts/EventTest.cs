@@ -40,10 +40,8 @@ public class EventTest : MonoBehaviour {
 		{
 			Debug.Log("New Year!");
 		};
-        EnviroSkyMgr.instance.OnDayTime += () =>
-		{
-			Debug.Log("New Year!");
-		};
+
+
 	}
 
     void DoOnWeatherChange (EnviroWeatherPreset type)
@@ -77,7 +75,6 @@ public class EventTest : MonoBehaviour {
 	public void TestEventsDay ()
 	{
 		print("Day now!!");
-	
 	}
 }
 }

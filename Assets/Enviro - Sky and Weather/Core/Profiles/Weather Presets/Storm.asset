@@ -3,9 +3,8 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -55,8 +54,6 @@ MonoBehaviour:
   fogStartDistance: 0
   fogDistance: 0
   fogDensity: 0.0005
-  fogAttenuationDistance: 207
-  fogRelativeFogHeight: 971
   weatherSkyMod:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -144,9 +141,9 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 4
-  volumeLightIntensity: 0.01
+  volumeLightIntensity: 0.2
   shadowIntensityMod: -0.2
-  heightFogDensity: 0.39
+  heightFogDensity: 2.1
   SkyFogHeight: 0.45
   skyFogStart: 0
   SkyFogIntensity: 1
@@ -154,7 +151,7 @@ MonoBehaviour:
   fogSunBlocking: 0
   moonIntensity: 0
   effectSystems:
-  - prefab: {fileID: 1000010197746070, guid: 8bb020f87d2cd0e4d86ee7420259c2b2, type: 3}
+  - prefab: {fileID: 1000010197746070, guid: 8bb020f87d2cd0e4d86ee7420259c2b2, type: 2}
     localPositionOffset: {x: 0, y: 25, z: 0}
     localRotationOffset: {x: -90, y: 0, z: -180}
   WindStrenght: 1
@@ -163,7 +160,7 @@ MonoBehaviour:
   temperatureLevel: 0
   isLightningStorm: 1
   lightningInterval: 10
-  auroraIntensity: 0
+  auroraIntensity: 1
   weatherSFX: {fileID: 8300000, guid: f31058b86e6160c4ab736a2b8c210219, type: 3}
   SpringDayAmbient: {fileID: 0}
   SpringNightAmbient: {fileID: 0}
@@ -176,6 +173,3 @@ MonoBehaviour:
   blurDistance: 1500
   blurIntensity: 0.25
   blurSkyIntensity: 4
-  sceneExposureMod: 0.8
-  skyExposureMod: 0.8
-  lightIntensityMod: 0.1

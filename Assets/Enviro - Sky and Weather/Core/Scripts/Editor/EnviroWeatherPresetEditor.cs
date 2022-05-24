@@ -131,21 +131,9 @@ public class EnviroWeatherPresetEditor : Editor {
             GUILayout.BeginVertical("Sky and Light Color", boxStyleModified);
 			GUILayout.Space(15);		
 			EditorGUILayout.PropertyField(skyMod, true, null);
-
-
 			EditorGUILayout.PropertyField(lightMod, true, null);
-
             myTarget.volumeLightIntensity = EditorGUILayout.Slider("Volume Light Intensity", myTarget.volumeLightIntensity, 0, 2);
-
             myTarget.shadowIntensityMod = EditorGUILayout.Slider("Shadow Intensity Mod", myTarget.shadowIntensityMod, -1f, 1f);
-#if ENVIRO_HDRP
-            if (EnviroSkyMgr.instance == null || EnviroSkyMgr.instance.LightSettings.usePhysicalBasedLighting)
-            {     
-                myTarget.sceneExposureMod = EditorGUILayout.Slider("Scene Exposure Modification", myTarget.sceneExposureMod, 0, 2);
-                myTarget.skyExposureMod = EditorGUILayout.Slider("Sky Exposure Modification", myTarget.skyExposureMod, 0, 2);
-                myTarget.lightIntensityMod = EditorGUILayout.Slider("Light Intensity Modification", myTarget.lightIntensityMod, 0, 2);
-            }
-#endif
             if (EditorGUI.EndChangeCheck())
 			{
 				serializedObj.ApplyModifiedProperties();
@@ -185,7 +173,8 @@ public class EnviroWeatherPresetEditor : Editor {
 
 #if ENVIRO_HD
             if (EnviroSkyMgr.instance == null || EnviroSkyMgr.instance.currentEnviroSkyVersion == EnviroSkyMgr.EnviroSkyVersion.HD)
-            {               
+            {
+                
                 GUILayout.BeginVertical("Aurora Settings", boxStyleModified);
                 GUILayout.Space(15);
                 myTarget.auroraIntensity = EditorGUILayout.Slider("Aurora Intensity", myTarget.auroraIntensity, 0f, 1f);

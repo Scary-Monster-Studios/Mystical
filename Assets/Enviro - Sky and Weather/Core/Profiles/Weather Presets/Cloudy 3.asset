@@ -3,9 +3,8 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -24,11 +23,11 @@ MonoBehaviour:
   possibiltyInWinter: 30
   cloudsConfig:
     ambientSkyColorIntensity: 0.9
-    scatteringCoef: 0.75
-    edgeDarkness: 0.655
+    scatteringCoef: 1
+    edgeDarkness: 0.7
     baseErosionIntensity: 0
-    detailErosionIntensity: 0.3
-    density: 1
+    detailErosionIntensity: 0.35
+    density: 2
     lightStepModifier: 0.25
     lightVariance: 0
     coverage: 0
@@ -145,8 +144,8 @@ MonoBehaviour:
   volumeLightIntensity: 0.2
   shadowIntensityMod: 0
   heightFogDensity: 0
-  SkyFogHeight: 4.25
-  skyFogStart: 0.018
+  SkyFogHeight: 1.92
+  skyFogStart: 0
   SkyFogIntensity: 1
   FogScatteringIntensity: 1.23
   fogSunBlocking: 1
@@ -158,7 +157,7 @@ MonoBehaviour:
   temperatureLevel: 0
   isLightningStorm: 0
   lightningInterval: 10
-  auroraIntensity: 0
+  auroraIntensity: 1
   weatherSFX: {fileID: 0}
   SpringDayAmbient: {fileID: 8300000, guid: 9e4f9b704d4c6a545863111b7ab9bb51, type: 3}
   SpringNightAmbient: {fileID: 8300000, guid: 421815712ee5317449eeef6d06fac4a3, type: 3}
@@ -171,6 +170,3 @@ MonoBehaviour:
   blurDistance: 511
   blurIntensity: 0.248
   blurSkyIntensity: 4.01
-  sceneExposureMod: 1
-  skyExposureMod: 1
-  lightIntensityMod: 1

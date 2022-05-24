@@ -80,7 +80,7 @@ public class EnviroSkyMgrEditor : Editor {
         }
 
 
-        GUILayout.BeginVertical("Enviro - Sky Manager 2.4.1", boxStyle);
+        GUILayout.BeginVertical("Enviro - Sky Manager 2.3.1", boxStyle);
 		GUILayout.Space(20);
 		EditorGUILayout.LabelField("Welcome to the Enviro Sky Manager! Add Lite and Standard Enviro instances and switch between those. Add third party support components or choose your render pipeline.", wrapStyle);
 	
@@ -102,20 +102,20 @@ public class EnviroSkyMgrEditor : Editor {
 
             GUILayout.BeginVertical("Render Pipeline", boxStyleModified);
             GUILayout.Space(20);
-            EditorGUILayout.LabelField("Please set your render pipeline here and choose between 'Built-In', 'URP' and HDRP.", wrapStyle);
+            EditorGUILayout.LabelField("Please set your render pipeline here and choose between 'Legacy' and 'LWRP/URP'. Get Enviro Pro if you want to use 'HDRP'.", wrapStyle);
             GUILayout.Space(10);
 
 
 #if ENVIRO_HDRP
              GUILayout.Label("Current Render Pipeline:   HDRP", headerStyle);
 #elif ENVIRO_LWRP
-             GUILayout.Label("Current Render Pipeline:   URP", headerStyle);
+             GUILayout.Label("Current Render Pipeline:   LWRP/URP", headerStyle);
 #else
-            GUILayout.Label("Current Render Pipeline:   Built-In", headerStyle);
+            GUILayout.Label("Current Render Pipeline:   Legacy", headerStyle);
 #endif
 
             GUILayout.Space(10);
-#if !ENVIRO_HDRP
+#if ENVIRO_PRO && !ENVIRO_HDRP
             if (GUILayout.Button("Activate HDRP Support"))
                 {
                     AddDefineSymbol("ENVIRO_HDRP");
@@ -124,7 +124,7 @@ public class EnviroSkyMgrEditor : Editor {
 #endif
 
 #if !ENVIRO_LWRP
-                if (GUILayout.Button("Activate URP Support"))
+                if (GUILayout.Button("Activate LWRP/URP Support"))
                 {
                      AddDefineSymbol("ENVIRO_LWRP");
                      RemoveDefineSymbol("ENVIRO_HDRP");
@@ -132,17 +132,30 @@ public class EnviroSkyMgrEditor : Editor {
 #endif
 
 #if ENVIRO_LWRP || ENVIRO_HDRP
-            if (GUILayout.Button("Activate Built-In Support"))
-                { 
+            if (GUILayout.Button("Activate Legacy Support"))
+                {
                     RemoveDefineSymbol("ENVIRO_LWRP");
                     RemoveDefineSymbol("ENVIRO_HDRP");
                 }
 #endif
 
 #if ENVIRO_LWRP
-                GUILayout.BeginVertical("URP Setup", boxStyleModified);
+                GUILayout.BeginVertical("LWRP/URP Setup", boxStyleModified);
                 GUILayout.Space(20);
-                EditorGUILayout.LabelField("Please assign the Enviro URP Renderer in your URP Assets -> Renderer List and activate the 'Depth' option.", wrapStyle);
+                EditorGUILayout.LabelField("Please import the files for URP with the 'Import' button. This will import all necesarry files and a preconfigured Renderer. After that you need to assign the 'Enviro URP Renderer' in your URP quality settings as custom renderer.", wrapStyle);
+                GUILayout.Space(10);
+#if ENVIRO_LW
+                if (GUILayout.Button("Import LWRP/URP Support for Enviro Lite"))
+                {
+                    AssetDatabase.ImportPackage("Assets/Enviro - Sky and Weather/Enviro Lite/URP Support/Enviro_Lite_URP.unitypackage", false);
+                }
+#endif
+#if ENVIRO_HD
+                if (GUILayout.Button("Import LWRP/URP Support for Enviro Standard"))
+                {
+                    AssetDatabase.ImportPackage("Assets/Enviro - Sky and Weather/Enviro Standard/URP Support/Enviro_Standard_URP.unitypackage", false);
+                }
+#endif
                 GUILayout.EndVertical();
 #endif
 
@@ -178,6 +191,16 @@ public class EnviroSkyMgrEditor : Editor {
                 GUILayout.Label("Delete " + myTarget.enviroHDInstance.gameObject.name + " if you want to add other prefab!");
             }
             GUILayout.EndVertical();
+#else
+                 GUILayout.BeginVertical("Standard Version", boxStyleModified);
+                GUILayout.Space(20);
+                GUILayout.Label("Attention! No Enviro Standard define found! Not needed for Enviro Lite users! Click on the button underneath to add it. It should add the required define if Enviro Standard folder was found. Otherwise ignore this.", headerStyle);
+                GUILayout.Space(5);
+                if (GUILayout.Button("Add Enviro Standard Define"))
+                {
+                     ForceAddDefineSymbol("ENVIRO_HD");
+                }
+               GUILayout.EndVertical();
 #endif
 
 #if ENVIRO_LW
@@ -200,6 +223,16 @@ public class EnviroSkyMgrEditor : Editor {
                 GUILayout.Label("Delete " + myTarget.enviroLWInstance.gameObject.name + " if you want to add other prefab!");
             }
             GUILayout.EndVertical();
+#else
+                GUILayout.BeginVertical("Lite Version", boxStyleModified);
+                GUILayout.Space(20);
+                GUILayout.Label("Attention! No Enviro Lite define found! Click on the button underneath to add it. It should add the required define if Enviro Lite folder was found. Otherwise ignore this.", headerStyle);
+                 GUILayout.Space(5);
+                if (GUILayout.Button("Add Enviro Lite Define"))
+                {
+                     ForceAddDefineSymbol("ENVIRO_LW");
+                }
+             GUILayout.EndVertical();
 #endif
         }
         GUILayout.EndVertical();
@@ -208,8 +241,8 @@ public class EnviroSkyMgrEditor : Editor {
         GUI.backgroundColor = boxColor1;
         GUILayout.BeginVertical("", boxStyleModified);
         GUI.backgroundColor = Color.white;
-        //myTarget.showInstances = EditorGUILayout.BeginToggleGroup(" Instances", myTarget.showInstances);
-        myTarget.showInstances = GUILayout.Toggle(myTarget.showInstances, "Instances", headerFoldout);
+       //myTarget.showInstances = EditorGUILayout.BeginToggleGroup(" Instances", myTarget.showInstances);
+       myTarget.showInstances = GUILayout.Toggle(myTarget.showInstances, "Instances", headerFoldout);
         if (myTarget.showInstances)
         {
           //  GUILayout.Space(10);

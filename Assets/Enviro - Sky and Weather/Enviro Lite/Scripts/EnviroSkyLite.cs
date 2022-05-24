@@ -35,8 +35,6 @@ public class EnviroSkyLite : EnviroCore
     //Materials
     [HideInInspector]public Material skyMat;
 
-
-
     private double lastMoonUpdate;
 
     //Inspector
@@ -56,7 +54,7 @@ public class EnviroSkyLite : EnviroCore
 
         //Time
         SetTime(GameTime.Years, GameTime.Days, GameTime.Hours, GameTime.Minutes, GameTime.Seconds);
-        lastHourUpdate = GameTime.Hours;
+        lastHourUpdate = Mathf.RoundToInt(internalHour);
         currentTimeInHours = GetInHours(internalHour, GameTime.Days, GameTime.Years, GameTime.DaysInYear);
         Weather.weatherFullyChanged = false;
         thunder = 0f;
@@ -89,18 +87,6 @@ public class EnviroSkyLite : EnviroCore
 
     void OnEnable()
     {
-        #if ENVIRO_HDRP
-        Shader.EnableKeyword("ENVIROHDRP");
-        #else
-        Shader.DisableKeyword("ENVIROHDRP");
-        #endif
-
-        #if ENVIRO_LWRP
-        Shader.EnableKeyword("ENVIROURP");
-        #else
-        Shader.DisableKeyword("ENVIROURP");
-        #endif
-
         //Check for Manager first!
         if (EnviroSkyMgr.instance == null)
         {
@@ -135,12 +121,6 @@ public class EnviroSkyLite : EnviroCore
         {
             Init();
         }
-
-#if AURA_IN_PROJECT
-        auraCameras = Aura2API.Aura.GetAuraCameras();
-        auraDirLight = Aura2API.Aura.GetAuraLights(LightType.Directional);
-#endif
-
     }
     /// <summary>
     /// Re-Initilize the system.
@@ -286,222 +266,6 @@ public class EnviroSkyLite : EnviroCore
         DynamicGI.UpdateEnvironment();
 
     }
-
-
- #if ENVIRO_HDRP
-    /// <summary>
-    /// Search for existing volume with visualEnvionment module and set sky to Enviro.
-    /// </summary>
-    public void CreateSkyAndFogVolume()
-    {
-        if(enviroVolumeHDRP == null)
-        {
-            UnityEngine.Rendering.Volume[] volume = GameObject.FindObjectsOfType<UnityEngine.Rendering.Volume>();
-            
-            bool found = false;
-            
-            for (int i = 0; i < volume.Length; i++)
-            {
-                 if (volume[i].name == "Enviro Lite Sky and Fog Volume")
-                 {
-                     enviroVolumeHDRP = volume[i];
-                     found = true;
-                 }
-            } 
-
-            if(found == false)
-               CreateNewSkyVolume();
-        }
- 
-        UnityEngine.Rendering.HighDefinition.VisualEnvironment TempEnv;
-        UnityEngine.Rendering.HighDefinition.EnviroSkyboxLite TempSky;
-        UnityEngine.Rendering.HighDefinition.Fog TempFog;
-        UnityEngine.Rendering.HighDefinition.Exposure TempExposure;
-
-        // VisualEnvironment             
-        if(visualEnvironment == null)
-        {
-            if (enviroVolumeHDRP.sharedProfile != null && enviroVolumeHDRP.sharedProfile.TryGet<UnityEngine.Rendering.HighDefinition.VisualEnvironment>(out TempEnv))
-            {
-                visualEnvironment = TempEnv;
-            }
-            else 
-            {
-                enviroVolumeHDRP.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.VisualEnvironment>();
-
-                if (enviroVolumeHDRP.sharedProfile.TryGet<UnityEngine.Rendering.HighDefinition.VisualEnvironment>(out TempEnv))
-                {
-                    visualEnvironment = TempEnv;
-                }
-            }
-        }
-
-        // Sky
-        if(enviroHDRPSkyLite == null)
-        {
-            
-            if (enviroVolumeHDRP.sharedProfile != null && enviroVolumeHDRP.sharedProfile.TryGet<UnityEngine.Rendering.HighDefinition.EnviroSkyboxLite>(out TempSky))
-            {
-                enviroHDRPSkyLite = TempSky;
-            }
-            else
-            {
-                enviroVolumeHDRP.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.EnviroSkyboxLite>();
-
-                if (enviroVolumeHDRP.sharedProfile.TryGet<UnityEngine.Rendering.HighDefinition.EnviroSkyboxLite>(out TempSky))
-                {
-                    enviroHDRPSkyLite = TempSky;
-                }
-            }
-        }
-
-        // FOG
-        if(hdrpFog == null)
-        {
-            if (enviroVolumeHDRP.sharedProfile != null && enviroVolumeHDRP.sharedProfile.TryGet<UnityEngine.Rendering.HighDefinition.Fog>(out TempFog))
-            {
-                hdrpFog = TempFog;
-            }
-            else
-            {
-                enviroVolumeHDRP.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.Fog>();
-
-                if (enviroVolumeHDRP.sharedProfile.TryGet<UnityEngine.Rendering.HighDefinition.Fog>(out TempFog))
-                {
-                    hdrpFog = TempFog;
-                }
-            }
-        }
-
-        // Exposure
-        if(enviroExposure == null)
-        {
-            if (enviroVolumeHDRP.sharedProfile != null && enviroVolumeHDRP.sharedProfile.TryGet<UnityEngine.Rendering.HighDefinition.Exposure>(out TempExposure))
-            {
-                enviroExposure = TempExposure;
-            }
-            else
-            {
-                enviroVolumeHDRP.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.Exposure>();
-
-                if (enviroVolumeHDRP.sharedProfile.TryGet<UnityEngine.Rendering.HighDefinition.Exposure>(out TempExposure))
-                {
-                    enviroExposure = TempExposure;
-                }
-            }
-        }
-
-        //Don't Destroy on Load
-        if(Application.isPlaying && EnviroSkyMgr.instance != null && EnviroSkyMgr.instance.dontDestroy)
-            DontDestroyOnLoad(enviroVolumeHDRP.gameObject);
- 
-
-        if (enviroHDRPSkyLite != null)
-        {
-            enviroHDRPSkyLite.skyIntensityMode.overrideState = true;
-            enviroHDRPSkyLite.skyIntensityMode.value = UnityEngine.Rendering.HighDefinition.SkyIntensityMode.Exposure;
-            enviroHDRPSkyLite.exposure.overrideState = true;
-
-            if(lightSettings.usePhysicalBasedLighting)
-                enviroHDRPSkyLite.exposure.value = lightSettings.skyExposurePhysical.Evaluate(GameTime.solarTime) * currentSkyExposureMod;
-            else
-                enviroHDRPSkyLite.exposure.value = lightSettings.skyExposure;
-
-            SetLightingUpdateMode();
-        }
-
-        if (hdrpFog != null)
-        {
-            hdrpFog.meanFreePath.overrideState = true;
-            hdrpFog.maximumHeight.overrideState = true;
-            hdrpFog.enabled.overrideState = true;
-        }
-
-        if (visualEnvironment != null)
-        {
-            if (skySettings.setEnviroSkybox)
-            {
-                visualEnvironment.skyType.value = 998;
-                visualEnvironment.skyType.overrideState = true;
-            }
-
-            visualEnvironment.skyAmbientMode.value = UnityEngine.Rendering.HighDefinition.SkyAmbientMode.Dynamic;
-            visualEnvironment.skyAmbientMode.overrideState = true;
-        }
-    }
-
-    /// <summary>
-    /// Creates a Sky and Fog Volume with a new profile. Saver than try to modify already existing profiles that could lead to a lot of issues.
-    /// </summary>
-    private void CreateNewSkyVolume()
-    {
-        GameObject volumeObj = new GameObject();
-        volumeObj.name = "Enviro Lite Sky and Fog Volume";
-        mySkyAndFogVolume = volumeObj;
-        UnityEngine.Rendering.Volume volumeCreated = volumeObj.AddComponent<UnityEngine.Rendering.Volume>();
-        UnityEngine.Rendering.VolumeProfile profile = GetDefaultSkyAndFogProfile("Enviro Lite Sky and Fog Profile");
-
-        enviroVolumeHDRP = volumeCreated;
-        volumeCreated.priority = 1;
-
-        if (profile == null)
-        {
-            UnityEngine.Rendering.VolumeProfile profile1 = new UnityEngine.Rendering.VolumeProfile();
-            volumeCreated.sharedProfile = profile1;
-            visualEnvironment = volumeCreated.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.VisualEnvironment>();
-            visualEnvironment.skyType.overrideState = true;
-            visualEnvironment.skyType.value = 998;
-            visualEnvironment.skyAmbientMode.overrideState = true;
-            visualEnvironment.skyAmbientMode.value = UnityEngine.Rendering.HighDefinition.SkyAmbientMode.Dynamic;
-
-            //Sky
-            enviroHDRPSkyLite = volumeCreated.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.EnviroSkyboxLite>();
-            enviroHDRPSkyLite.skyIntensityMode.overrideState = true;
-            SetLightingUpdateMode();
-            enviroHDRPSkyLite.exposure.overrideState = true;
-            if (lightSettings.usePhysicalBasedLighting)
-                enviroHDRPSkyLite.exposure.value = lightSettings.skyExposurePhysical.Evaluate(GameTime.solarTime);
-            else
-                enviroHDRPSkyLite.exposure.value = lightSettings.skyExposure;
-                
-            enviroHDRPSkyLite.updateMode.value = UnityEngine.Rendering.HighDefinition.EnvironmentUpdateMode.OnChanged;
-
-            // Fog
-            hdrpFog = volumeCreated.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.Fog>();
-            hdrpFog.meanFreePath.overrideState = true;
-            hdrpFog.maximumHeight.overrideState = true;
-            hdrpFog.enabled.overrideState = true;
-
-            // Exposure
-            enviroExposure = volumeCreated.sharedProfile.Add<UnityEngine.Rendering.HighDefinition.Exposure>();
-            enviroExposure.mode.overrideState = true;
-            enviroExposure.mode.value = UnityEngine.Rendering.HighDefinition.ExposureMode.Fixed;
-            enviroExposure.fixedExposure.overrideState = true;
-
-            if (lightSettings.usePhysicalBasedLighting)
-                enviroExposure.fixedExposure.value = lightSettings.exposurePhysical.Evaluate(GameTime.solarTime);
-            else
-                enviroExposure.fixedExposure.value = lightSettings.exposure;
-        }
-        else
-        {
-            volumeCreated.sharedProfile = profile;
-        }
-    }
-
-    private void SetLightingUpdateMode()
-    {
-        if(lightSettings.indirectLightingUpdateMode == EnviroLightSettings.AmbientUpdateMode.Realtime)
-           enviroHDRPSkyLite.updateMode.value = UnityEngine.Rendering.HighDefinition.EnvironmentUpdateMode.Realtime;
-        else
-           enviroHDRPSkyLite.updateMode.value = UnityEngine.Rendering.HighDefinition.EnvironmentUpdateMode.OnChanged;
-    }
-
-#endif
-
-
-
-
     /// <summary>
     /// Final Initilization and startup.
     /// </summary>
@@ -516,20 +280,6 @@ public class EnviroSkyLite : EnviroCore
             return;
         }
 
-        if(isNight)
-            EnviroSkyMgr.instance.NotifyIsNight();
-        else
-            EnviroSkyMgr.instance.NotifyIsDay();
-
-#if ENVIRO_HDRP
-        CreateSkyAndFogVolume();
-#else
-        if (skyMat != null && RenderSettings.skybox != skyMat)
-            SetupSkybox();
-        else if (skyMat == null)
-            SetupSkybox();
-#endif
-
         InitImageEffects();
 
         // Setup Camera
@@ -541,7 +291,7 @@ public class EnviroSkyLite : EnviroCore
 
             Components.GlobalReflectionProbe.myProbe.farClipPlane = PlayerCamera.farClipPlane;
         }
-        UpdateReflections(true);
+
         started = true;
     }
     /// <summary>
@@ -627,12 +377,6 @@ public class EnviroSkyLite : EnviroCore
 
     void Update()
     {
-
-#if ENVIRO_HDRP
-        frames++;
-#endif
-
-
         if (profile == null)
         {
             Debug.Log("No profile applied! Please create and assign a profile.");
@@ -642,22 +386,11 @@ public class EnviroSkyLite : EnviroCore
         if (!started && !serverMode)
         {
             UpdateTime(GameTime.DaysInYear);
-#if ENVIRO_HDRP
-            if (frames == 2)
-            {
-                UpdateSunAndMoonPosition();
-                UpdateSceneView();
-                CalculateDirectLight();
-                frames = 0;
-            }
-#else
             UpdateSunAndMoonPosition();
             UpdateSceneView();
             CalculateDirectLight();
             UpdateAmbientLight();
-#endif
-
-            UpdateReflections(false);
+            UpdateReflections();
 
             if (AssignInRuntime && PlayerTag != "" && CameraTag != "" && Application.isPlaying)
             {
@@ -703,43 +436,15 @@ public class EnviroSkyLite : EnviroCore
             }
 
             UpdateAmbientLight();
-            UpdateReflections(false);
+            UpdateReflections();
             UpdateWeather();
             UpdateParticleClouds(useParticleClouds);
-
-#if ENVIRO_HDRP
-            UpdateSunAndMoonPosition();
-            UpdateHDRPPostProcessing();
-            
-            if(Application.isPlaying)
-            {
-                if (frames >= lightingUpdateEachFrames)
-                {
-                    CalculateDirectLight();
-            
-                    frames = 0;
-                }
-            }
-            else
-            {
-                if (frames >= 1)
-                {
-                    CalculateDirectLight();
-           
-                    frames = 0;
-                }
-
-            }
-
-#else
             UpdateSunAndMoonPosition();
             CalculateDirectLight();
-#endif
             SetMaterialsVariables();
+            CalculateSatPositions(LST);
 
-#if ENVIRO_HDRP
-            CreateSkyAndFogVolume();
-#else
+#if !ENVIRO_HDRP
             if (RenderSettings.skybox != skyMat)
                 SetupSkybox();
 #endif
@@ -808,8 +513,9 @@ public class EnviroSkyLite : EnviroCore
         }
     }
 
-    public void UpdateSkyShaderVariables(Material skyMat)
+    private void SetMaterialsVariables()
     {
+        //Simple
         skyMat.SetFloat("_BlackGround", skySettings.blackGroundMode ? 1f : 0f);
         skyMat.SetColor("_SkyColor", skySettings.simpleSkyColor.Evaluate(GameTime.solarTime));
         skyMat.SetColor("_HorizonColor", skySettings.simpleHorizonColor.Evaluate(GameTime.solarTime));
@@ -890,17 +596,7 @@ public class EnviroSkyLite : EnviroCore
         skyMat.SetVector("_FlatCloudsLightingParams", new Vector4(cloudsConfig.flatCloudsDirectLightIntensity, cloudsConfig.flatCloudsAmbientLightIntensity, cloudsConfig.flatCloudsAbsorbtion, cloudsConfig.flatCloudsHGPhase));
         skyMat.SetVector("_FlatCloudsAnimation", new Vector4(cloudFlatBaseAnim.x, cloudFlatBaseAnim.y, cloudFlatDetailAnim.x, cloudFlatDetailAnim.y));
         skyMat.SetFloat("_CloudsExposure", cloudsSettings.cloudsExposure);
-    }
 
-
-    private void SetMaterialsVariables()
-    {
-#if !ENVIRO_HDRP
-        if (skyMat != null)
-        {
-            UpdateSkyShaderVariables(skyMat);
-        }
-#endif
         //Globals
         Shader.SetGlobalVector("_SunDir", -Components.Sun.transform.forward);
         Shader.SetGlobalColor("_EnviroLighting", lightSettings.LightColor.Evaluate(GameTime.solarTime));
@@ -943,9 +639,6 @@ public class EnviroSkyLite : EnviroCore
 
         Shader.DisableKeyword("ENVIROVOLUMELIGHT");
     }
-
-
-
 
     // Make the parameters stay in reasonable range
     private void ValidateParameters()
@@ -1002,7 +695,6 @@ public class EnviroSkyLite : EnviroCore
         cloudsConfig.flatCloudsHGPhase = Mathf.Lerp(cloudsConfig.flatCloudsHGPhase, i.cloudsConfig.flatCloudsHGPhase, speed);
 
         shadowIntensityMod = Mathf.Lerp(shadowIntensityMod, i.shadowIntensityMod, speed);
-        globalVolumeLightIntensity = Mathf.Lerp(globalVolumeLightIntensity, i.volumeLightIntensity, speed);
 
         currentWeatherSkyMod = Color.Lerp(currentWeatherSkyMod, i.weatherSkyMod.Evaluate(GameTime.solarTime), speed);
         currentWeatherFogMod = Color.Lerp(currentWeatherFogMod, i.weatherFogMod.Evaluate(GameTime.solarTime), speed * 10);
@@ -1028,7 +720,7 @@ public class EnviroSkyLite : EnviroCore
                 RenderSettings.fogEndDistance = Mathf.Lerp(RenderSettings.fogEndDistance, i.fogDistance, speed);
                 RenderSettings.fogStartDistance = Mathf.Lerp(RenderSettings.fogStartDistance, i.fogStartDistance, speed);
             }
-            else 
+            else
             {
                 float targetDensity = i.fogDensity;
 
@@ -1046,20 +738,6 @@ public class EnviroSkyLite : EnviroCore
             Fog.skyFogStart = Mathf.Lerp(Fog.skyFogStart, i.skyFogStart, speed);
             Fog.skyFogHeight = Mathf.Lerp(Fog.skyFogHeight, i.SkyFogHeight, speed);
             Fog.skyFogIntensity = Mathf.Lerp(Fog.skyFogIntensity, i.SkyFogIntensity, speed);
-
-            #if ENVIRO_HDRP
-            if(hdrpFog != null)
-            {
-                hdrpFog.meanFreePath.value = Mathf.Lerp(hdrpFog.meanFreePath.value, i.fogAttenuationDistance, speed);
-                Fog.hdrpRelativeFogHeight = Mathf.Lerp(Fog.hdrpRelativeFogHeight, i.fogRelativeFogHeight, speed);
- 
-                hdrpFog.maximumHeight.value = Fog.hdrpRelativeFogHeight + transform.position.y;
-
-                hdrpFog.tint.overrideState = true;
-                hdrpFog.tint.value = Color.Lerp(fogSettings.fogColorTint.Evaluate(GameTime.solarTime), currentWeatherFogMod, currentWeatherFogMod.a) * (thunder + 1);        
-            }
-#endif
-
 
         }
     }
@@ -1152,47 +830,6 @@ public class EnviroSkyLite : EnviroCore
         }
     }
 
-
-    #if ENVIRO_HDRP
-    private void UpdateHDRPPostProcessing()
-    {
-        if (enviroExposure != null)
-        {
-            if (lightSettings.usePhysicalBasedLighting)
-                enviroExposure.fixedExposure.value = lightSettings.exposurePhysical.Evaluate(GameTime.solarTime) * currentSceneExposureMod;
-            else
-                enviroExposure.fixedExposure.value = lightSettings.exposure;
-        }
-        else
-        {
-            CreateSkyAndFogVolume();
-        }
-
-        if (enviroHDRPSkyLite != null)
-        {
-            if (lightSettings.usePhysicalBasedLighting)
-                enviroHDRPSkyLite.exposure.value = lightSettings.skyExposurePhysical.Evaluate(GameTime.solarTime) * currentSkyExposureMod;
-            else
-                enviroHDRPSkyLite.exposure.value = lightSettings.skyExposure;
-
-            SetLightingUpdateMode();
-        }
-        else
-        {
-            CreateSkyAndFogVolume();
-        }
-
-        if (hdrpFog != null)
-        {
-            hdrpFog.enabled.value = fogSettings.useHDRPFog;
-        }
-        else
-        {
-            CreateSkyAndFogVolume();
-        }
-    }
-#endif
-
     #region API
     /// <summary>
     /// Changes clouds, fog and particle effects to current weather settings instantly.
@@ -1265,14 +902,8 @@ public class EnviroSkyLite : EnviroCore
         GameTime.ProgressTime = progressMode;
         if (EffectsHolder != null)
             EffectsHolder.SetActive(true);
-
         if (EnviroSkyRender != null)
             EnviroSkyRender.enabled = true;
-
-#if ENVIRO_HDRP
-        if(mySkyAndFogVolume != null)
-           mySkyAndFogVolume.SetActive(true);
-#endif
 
         started = true;
 
@@ -1291,14 +922,8 @@ public class EnviroSkyLite : EnviroCore
 
         if (EnviroSkyRender != null)
             EnviroSkyRender.enabled = false;
-
         if (EnviroPostProcessing != null)
             EnviroPostProcessing.enabled = false;
-
-#if ENVIRO_HDRP
-        if(mySkyAndFogVolume != null)
-           mySkyAndFogVolume.SetActive(false);
-#endif
         started = false;
     }
 
@@ -1315,11 +940,6 @@ public class EnviroSkyLite : EnviroCore
 
         if (EnviroPostProcessing != null)
             EnviroPostProcessing.enabled = false;
-
-#if ENVIRO_HDRP
-        if(mySkyAndFogVolume != null)
-           mySkyAndFogVolume.SetActive(false);
-#endif
     }
 
     public void Activate()
@@ -1334,11 +954,6 @@ public class EnviroSkyLite : EnviroCore
 
         if (EnviroPostProcessing != null)
             EnviroPostProcessing.enabled = true;
-
-#if ENVIRO_HDRP
-        if(mySkyAndFogVolume != null)
-           mySkyAndFogVolume.SetActive(true);
-#endif
 
         TryPlayAmbientSFX();
         if(Weather.currentAudioSource != null)

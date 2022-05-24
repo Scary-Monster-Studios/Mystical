@@ -3,9 +3,8 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -55,8 +54,6 @@ MonoBehaviour:
   fogStartDistance: 0
   fogDistance: 10
   fogDensity: 0.001
-  fogAttenuationDistance: 10
-  fogRelativeFogHeight: 50
   weatherSkyMod:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 0}
@@ -170,9 +167,6 @@ MonoBehaviour:
   AutumnNightAmbient: {fileID: 8300000, guid: 421815712ee5317449eeef6d06fac4a3, type: 3}
   WinterDayAmbient: {fileID: 0}
   WinterNightAmbient: {fileID: 0}
-  blurDistance: 32
+  blurDistance: 38
   blurIntensity: 0.772
   blurSkyIntensity: 0
-  sceneExposureMod: 1
-  skyExposureMod: 1
-  lightIntensityMod: 1

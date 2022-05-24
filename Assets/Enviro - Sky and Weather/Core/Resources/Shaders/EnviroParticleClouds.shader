@@ -9,7 +9,7 @@ Category {
 	Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "PreviewType"="Plane" }
 	Blend SrcAlpha OneMinusSrcAlpha
 	ColorMask RGB
-	Cull Off Lighting On ZWrite Off
+	Cull Off Lighting Off ZWrite Off
 	
 
 	SubShader {
@@ -94,13 +94,13 @@ Category {
 				sunDir.y = saturate(clamp(1.0 - _SunDir.y, 0.0, 0.5));
 				fogClr = ComputeScattering(normalize(wsDir), sunDir);
 
-#if ENVIROVOLUMELIGHT 
+#if ENVIROVOLUMELIGHT
 
 #if UNITY_SINGLE_PASS_STEREO
 				float4 scaleOffset = unity_StereoScaleOffset[unity_StereoEyeIndex];
 				uv = (uv - scaleOffset.zw) / scaleOffset.xy;
 #endif
-				float4 volumeLighting = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_EnviroVolumeLightingTex, UnityStereoTransformScreenSpaceTex(uv));
+				float4 volumeLighting = tex2D(_EnviroVolumeLightingTex, UnityStereoTransformScreenSpaceTex(uv));
 				volumeLighting *= _EnviroParams.x;
 				final = lerp(lerp(fogClr, fogClr + volumeLighting, _EnviroVolumeDensity), lerp(clr, clr + volumeLighting, _EnviroVolumeDensity), fogFacSky);
 #else
@@ -118,14 +118,10 @@ Category {
 				UNITY_APPLY_FOG(i.fogCoord, col);				
 				float3 wsDir = normalize(i.posWorld.xyz -_WorldSpaceCameraPos);
 				float4 fog = TransparentParticleCloudsFog(col, i.posWorld,i.uv.xy / i.uv.w);
-				//float alpha = clamp(col.a * clamp(wsDir.y*1.5, 0, 1),0,1);
-				//if(wsDir.y + _WorldSpaceCameraPos.y < _WorldSpaceCameraPos.y)
-				//alpha = col.a;
 				return float4(fog.rgb, clamp(col.a * clamp(wsDir.y*1.5, 0, 1),0,1));
 			}
 			ENDCG 
 		}
 	}	
 }
-FallBack "Legacy Shader/Particles/Alpha Blended"
 }

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class EnviroAudioSource : MonoBehaviour {
@@ -17,6 +17,7 @@ public class EnviroAudioSource : MonoBehaviour {
     public AudioSource audiosrc;
 	public bool isFadingIn = false;
 	public bool isFadingOut = false;
+
 
 	float currentAmbientVolume;
 	float currentWeatherVolume;

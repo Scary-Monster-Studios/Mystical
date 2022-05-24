@@ -3,10 +3,10 @@ Shader "Enviro/Lite/EnviroFogRenderingSimple"
 {
 	Properties
 	{
-	//	_MainTex("Base (RGB)", Any) = "white" {}
+		_MainTex("Base (RGB)", Any) = "white" {}
 	}
 	SubShader
-	{ 
+	{
 		Pass
 		{
 			ZTest Always Cull Off ZWrite Off Fog { Mode Off }
@@ -15,7 +15,7 @@ Shader "Enviro/Lite/EnviroFogRenderingSimple"
 	#pragma vertex vert
 	#pragma fragment frag
 	#pragma target 2.0
-	#pragma multi_compile __ ENVIROURP
+
 	#include "UnityCG.cginc" 
 
 	UNITY_DECLARE_SCREENSPACE_TEXTURE(_MainTex);
@@ -39,7 +39,6 @@ Shader "Enviro/Lite/EnviroFogRenderingSimple"
 	{
 		float4 vertex : POSITION;
 		float3 texcoord : TEXCOORD0;
-		UNITY_VERTEX_INPUT_INSTANCE_ID
 	};
 
 	struct v2f 
@@ -47,30 +46,22 @@ Shader "Enviro/Lite/EnviroFogRenderingSimple"
 		float4 pos : SV_POSITION;
 		float3 texcoord : TEXCOORD0;
 		float2 uv : TEXCOORD1;
-		UNITY_VERTEX_OUTPUT_STEREO
+UNITY_VERTEX_OUTPUT_STEREO
 	};
 
 
 	v2f vert(appdata_img v)
 	{
 		v2f o;
-		UNITY_SETUP_INSTANCE_ID(v); //Insert
+					UNITY_SETUP_INSTANCE_ID(v); //Insert
 		UNITY_INITIALIZE_OUTPUT(v2f, o); //Insert
 		UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o); //Insert
-#if defined(ENVIROURP)
-		o.pos = float4(v.vertex.xyz,1.0);
-		#if UNITY_UV_STARTS_AT_TOP
-                o.pos.y *= -1;
-         #endif
-#else
 		o.pos = v.vertex * float4(2, 2, 1, 1) + float4(-1, -1, 0, 0);
-#endif
 		o.uv.xy = v.texcoord.xy;
-
-#if !ENVIROURP && UNITY_UV_STARTS_AT_TOP
-		if (_MainTex_TexelSize.y > 0)
+#if UNITY_UV_STARTS_AT_TOP
+	if (_MainTex_TexelSize.y > 0)
 			o.uv.y = 1 - o.uv.y;
-#endif  
+#endif 
 		return o;
 	}
 
@@ -102,8 +93,7 @@ Shader "Enviro/Lite/EnviroFogRenderingSimple"
 
 	fixed4 frag(v2f i) : SV_Target
 	{
-	UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
-	
+
 	float rawDepth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, UnityStereoTransformScreenSpaceTex(i.uv));
 	float dpth = Linear01Depth(rawDepth);
 

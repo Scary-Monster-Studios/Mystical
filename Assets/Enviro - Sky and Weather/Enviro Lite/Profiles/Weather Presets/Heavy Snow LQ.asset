@@ -3,9 +3,8 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -152,7 +151,7 @@ MonoBehaviour:
   fogSunBlocking: 0
   moonIntensity: 0
   effectSystems:
-  - prefab: {fileID: 1000012464414300, guid: 5ed4ce1f9abfa944fb0462b08c373c93, type: 3}
+  - prefab: {fileID: 1000012464414300, guid: 5ed4ce1f9abfa944fb0462b08c373c93, type: 2}
     localPositionOffset: {x: 0, y: 20, z: 0}
     localRotationOffset: {x: -90, y: 0, z: -180}
   WindStrenght: 0.203
@@ -174,6 +173,3 @@ MonoBehaviour:
   blurDistance: 100
   blurIntensity: 1
   blurSkyIntensity: 1
-  sceneExposureMod: 1
-  skyExposureMod: 1
-  lightIntensityMod: 1

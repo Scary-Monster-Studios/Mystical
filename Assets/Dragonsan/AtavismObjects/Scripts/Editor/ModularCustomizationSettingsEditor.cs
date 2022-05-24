@@ -44,6 +44,7 @@ namespace Atavism
            GUILayout.BeginVertical("Sockets Definitions", boxStyle);
            GUILayout.Space(20);
 
+           
            if (slots == null || slots.Length == 2)
            {
                GUI.color = Color.red;
@@ -54,6 +55,8 @@ namespace Atavism
                GUILayout.EndVertical();
                return;
            }
+           
+           
            foreach (AttachmentSocket soc in Enum.GetValues(typeof(AttachmentSocket)))
            {
                bool found = false;
@@ -72,6 +75,8 @@ namespace Atavism
                }
            }
 
+         
+           
            for (int s = 0; s < obj.settings.Count; s++)
            {
                

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11460872}
+  m_Layer: 0
+  m_Name: MagicBoltProjectileCE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.96, z: -1.9099998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11460872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de6615893dbbf24ba92c77fc7ff1759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 1
+  activationDelay: 0
+  duration: 0.8
+  destroyWhenFinished: 1
+  repeatProjectile: 1
+  projectileDestroyDelay: 1
+  repeatDelay: 0
+  casterSlot: Main Hand
+  casterSlotAdditionalY: 0
+  projectileWeaponObject: 0
+  trailOnProjectaileWeapon: 0
+  ObjectReturnToCaster: 0
+  rotateObject: 0
+  rotateSpeed: 20
+  hideWeapon: 0
+  hideTime: 0
+  projectileObject: {fileID: 1000010109403024, guid: 2f5f8ae6b30dd13489af19c24897fdd3,
+    type: 3}
+  projectileParticle: {fileID: 0}
+  projectileSound: []
+  projectileSoundClipName: []
+  soundClip3D: 1
+  soundVolume: 1
+  speed: 20
+  mixerGroupName: SFX
+  maxDistance: 100
+  linear: 1
+  targetSlot: Root
+  hitSlot: Root
+  hitSlotAdditionalY: 0
+  forceToHitSlot: 0
+  hitObject: {fileID: 1000014031298942, guid: 91b75d09b70d9c04c85b78280744650e, type: 3}
+  hitParticle: {fileID: 0}
+  hitSound: []
+  hitSoundClipName: []
+  hitAnimation: 
+  animationType: 0
+  hitSoundClip3D: 1
+  hitSoundVolume: 1
+  hitMixerGroupName: SFX
+  hitMaxDistance: 100
+  hitlinear: 1
+  hitSetParent: 0
+  hitLookAtCamera: 1
+  interruptCanTerminateCoordEffect: 1

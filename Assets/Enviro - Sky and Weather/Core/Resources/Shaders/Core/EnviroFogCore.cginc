@@ -1,16 +1,10 @@
 ﻿	#include "UnityCG.cginc"
 
-	//UNITY_DECLARE_SCREENSPACE_TEXTURE(_EnviroVolumeLightingTex);
-	#if defined(UNITY_STEREO_INSTANCING_ENABLED) || defined(UNITY_STEREO_MULTIVIEW_ENABLED)
-	UNITY_DECLARE_TEX2DARRAY(_EnviroVolumeLightingTex);
-	#else
-	sampler2D _EnviroVolumeLightingTex;
-	#endif
-
 	uniform float4 _HeightParams;
 	uniform float4 _DistanceParams;
 	uniform int4 _SceneFogMode;
 	uniform float4 _SceneFogParams;
+	uniform sampler2D _EnviroVolumeLightingTex;		
 	uniform float4 _FogNoiseData;// x: scale, y: intensity, z: intensity offset
 	uniform float4 _FogNoiseVelocity;	// x: x velocity, y: z velocity
 	uniform float4 _EnviroParams; //gametime,distance,height,_tonemapping
@@ -239,7 +233,7 @@ half3 tonemapACES(half3 color, float Exposure)
 		float4 volumeLighting = float4(0, 0, 0, 0);
 #else
 
-	#if ENVIRO_SIMPLE_FOG 
+	#if ENVIRO_SIMPLE_FOG
 			fogClr = unity_FogColor;
 	#else
 			float2 sunDir;
@@ -253,7 +247,7 @@ half3 tonemapACES(half3 color, float Exposure)
 		 uv = (uv - scaleOffset.zw) / scaleOffset.xy;
 		#endif
 
-		float4 volumeLighting = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_EnviroVolumeLightingTex, UnityStereoTransformScreenSpaceTex(uv)) * _EnviroParams.x;
+		float4 volumeLighting = tex2D(_EnviroVolumeLightingTex, UnityStereoTransformScreenSpaceTex(uv)) * _EnviroParams.x;
 #endif
 		float4 final = lerp (lerp(fogClr, fogClr + volumeLighting, _EnviroVolumeDensity), lerp(clr, clr + volumeLighting, _EnviroVolumeDensity), fogFac);
 

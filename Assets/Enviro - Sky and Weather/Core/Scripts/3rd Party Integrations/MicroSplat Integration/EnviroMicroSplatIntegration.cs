@@ -3,20 +3,18 @@ using System.Collections;
 #if ENVIRO_MICROSPLAT_SUPPORT
 [AddComponentMenu("Enviro/Integration/MicroSplat Integration")]
 #endif
-
-[ExecuteInEditMode]
 public class EnviroMicroSplatIntegration : MonoBehaviour {
 #if ENVIRO_MICROSPLAT_SUPPORT
     [Header("Wetness")]
     public bool UpdateWetness = true;
-    [Range(0f, 1f)]
-    public float minWetness = 0f;
     [Range(0f, 1f)]
     public float maxWetness = 1f;
     [Header("Rain Ripples")]
     public bool UpdateRainRipples = true;
     [Header("Puddle Settings")]
     public bool UpdatePuddles = true;
+    [Range(0f,1f)]
+    public float maxPuddle = 1f;
     [Header("Stream Settings")]
     public bool UpdateStreams = true;
     [Header("Snow Settings")]
@@ -35,12 +33,11 @@ public class EnviroMicroSplatIntegration : MonoBehaviour {
 		}
 
 		if (UpdateWetness) {
-            float currWetness = Mathf.Clamp(EnviroSkyMgr.instance.GetWetnessIntensity(), minWetness, maxWetness);
-            Shader.SetGlobalVector("_Global_WetnessParams", new Vector2(minWetness, currWetness));
-        }
+            Shader.SetGlobalVector ("_Global_WetnessParams", new Vector2(EnviroSkyMgr.instance.GetWetnessIntensity(), maxWetness));
+		}
 			
 		if (UpdatePuddles) {
-            Shader.SetGlobalFloat("_Global_PuddleParams", EnviroSkyMgr.instance.GetWetnessIntensity());
+            Shader.SetGlobalVector ("_Global_PuddleParams", new Vector2(EnviroSkyMgr.instance.GetWetnessIntensity(), maxPuddle));
 		}
 
 		if (UpdateRainRipples) {
