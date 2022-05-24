@@ -28,6 +28,9 @@
 # Visual Studio cache directory
 .vs/
 
+#zip files
+*.zip
+
 # Gradle cache directory
 .gradle/
 
@@ -53,6 +56,8 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+*.zip.meta
+*.log.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -64,7 +69,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-#Atavism lock file
+#Atavism
+AtavismEditor.log
 atavismeditor.lock
 
 
