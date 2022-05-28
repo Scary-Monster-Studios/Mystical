@@ -1,38 +1,572 @@
-DATE: 5/20/2022 6:15:24 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:15:33 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:15:35 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:15:48 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:15:56 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:16:04 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:16:47 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:17:40 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:30:20 AM : SELECT id, choice FROM editor_option_choice where optionTypeID = (SELECT id from editor_option where optionType = 'Currency Group') AND isactive = 1
-DATE: 5/20/2022 6:30:21 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:36:38 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:40:15 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/20/2022 6:40:33 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 8:23:37 AM : SELECT id, choice FROM editor_option_choice where optionTypeID = (SELECT id from editor_option where optionType = 'Currency Group') AND isactive = 1
-DATE: 5/23/2022 8:23:38 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 8:30:19 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 8:31:30 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 8:31:32 AM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:19:53 PM : SELECT id, choice FROM editor_option_choice where optionTypeID = (SELECT id from editor_option where optionType = 'Currency Group') AND isactive = 1
-DATE: 5/23/2022 1:19:53 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:20:25 PM : SELECT id, choice FROM editor_option_choice where optionTypeID = (SELECT id from editor_option where optionType = 'Currency Group') AND isactive = 1
-DATE: 5/23/2022 1:20:25 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:20:32 PM : SELECT id, choice FROM editor_option_choice where optionTypeID = (SELECT id from editor_option where optionType = 'Currency Group') AND isactive = 1
-DATE: 5/23/2022 1:20:32 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:21:59 PM : SELECT id, choice FROM editor_option_choice where optionTypeID = (SELECT id from editor_option where optionType = 'Currency Group') AND isactive = 1
-DATE: 5/23/2022 1:22:00 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:24:19 PM : SELECT id, choice FROM editor_option_choice where optionTypeID = (SELECT id from editor_option where optionType = 'Currency Group') AND isactive = 1
-DATE: 5/23/2022 1:24:19 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:30:15 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:31:05 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:31:05 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:31:17 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/23/2022 1:37:18 PM : SELECT id, choice FROM editor_option_choice where optionTypeID = (SELECT id from editor_option where optionType = 'Currency Group') AND isactive = 1
-DATE: 5/23/2022 1:37:18 PM : SELECT name FROM item_slots where isactive = 1
-DATE: 5/24/2022 7:23:07 AM : SELECT id, name FROM resource_node_profile where isactive = 1
-DATE: 5/24/2022 7:23:08 AM : SELECT id, name FROM resource_node_profile where isactive = 1
-DATE: 5/24/2022 7:23:16 AM : SELECT id, name FROM resource_node_profile where isactive = 1
-DATE: 5/24/2022 7:23:16 AM : SELECT id, name FROM resource_node_profile where isactive = 1
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 34
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>0.004486203</x>
+        <y>1.12127733</y>
+        <z>0.07780969</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>1.12671876</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>-0.582996964</x>
+          <y>0</y>
+          <z>-1.73746635E-08</z>
+        </AOVector>
+        <AOVector>
+          <x>-1.12099108E-09</x>
+          <y>0</y>
+          <z>0.03761422</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 35
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>0.004486203</x>
+        <y>1.12127733</y>
+        <z>0.07780969</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>1.12671876</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>-0.582996964</x>
+          <y>0</y>
+          <z>-1.73746635E-08</z>
+        </AOVector>
+        <AOVector>
+          <x>-1.12099108E-09</x>
+          <y>0</y>
+          <z>0.03761422</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 36
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders />
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 37
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders />
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 38
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders />
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 39
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders />
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 40
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>-1.07492127E-07</x>
+        <y>1.53327322</y>
+        <z>0.00186716765</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>-0</x>
+          <y>1.505</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>1.425</x>
+          <y>0</y>
+          <z>-8.942397E-06</z>
+        </AOVector>
+        <AOVector>
+          <x>-6.275366E-07</x>
+          <y>0</y>
+          <z>-0.1</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 41
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>-1.07492127E-07</x>
+        <y>1.53327322</y>
+        <z>0.00186716765</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>-0</x>
+          <y>1.505</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>1.425</x>
+          <y>0</y>
+          <z>-8.942397E-06</z>
+        </AOVector>
+        <AOVector>
+          <x>-6.275366E-07</x>
+          <y>0</y>
+          <z>-0.1</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:12 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 42
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>-1.30227178E-07</x>
+        <y>1.53327322</y>
+        <z>0.00186716765</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>1.5332725</y>
+          <z>-0</z>
+        </AOVector>
+        <AOVector>
+          <x>1.5</x>
+          <y>0</y>
+          <z>8.851288E-06</z>
+        </AOVector>
+        <AOVector>
+          <x>7.999964E-07</x>
+          <y>0</y>
+          <z>-0.135572881</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:13 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 43
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>-1.30227178E-07</x>
+        <y>1.53327322</y>
+        <z>0.00186716765</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>1.5332725</y>
+          <z>-0</z>
+        </AOVector>
+        <AOVector>
+          <x>1.5</x>
+          <y>0</y>
+          <z>8.851288E-06</z>
+        </AOVector>
+        <AOVector>
+          <x>7.999964E-07</x>
+          <y>0</y>
+          <z>-0.135572881</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:13 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 44
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>0.06629397</x>
+        <y>0.354636639</y>
+        <z>0.06250519</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>-4.7793975E-07</y>
+          <z>-4.00924969</z>
+        </AOVector>
+        <AOVector>
+          <x>-5.81776428</x>
+          <y>0</y>
+          <z>-0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>1.065735</y>
+          <z>-1.270455E-07</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:13 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 45
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>0.06629397</x>
+        <y>0.354636639</y>
+        <z>0.06250519</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>-4.7793975E-07</y>
+          <z>-4.00924969</z>
+        </AOVector>
+        <AOVector>
+          <x>-5.81776428</x>
+          <y>0</y>
+          <z>-0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>1.065735</y>
+          <z>-1.270455E-07</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:13 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 46
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>0.06629397</x>
+        <y>0.354636639</y>
+        <z>0.06250519</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>-4.779409E-07</y>
+          <z>-4.009259</z>
+        </AOVector>
+        <AOVector>
+          <x>-5.817778</x>
+          <y>0</y>
+          <z>-0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>1.06573629</y>
+          <z>-1.27045652E-07</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:13 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 47
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>0.06629397</x>
+        <y>0.354636639</y>
+        <z>0.06250519</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>-4.779409E-07</y>
+          <z>-4.009259</z>
+        </AOVector>
+        <AOVector>
+          <x>-5.817778</x>
+          <y>0</y>
+          <z>-0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>1.06573629</y>
+          <z>-1.27045652E-07</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:13 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 48
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>0.44</x>
+        <y>0.78</y>
+        <z>-0.94</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>0.835</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>-0.125</x>
+          <y>0</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>0</y>
+          <z>0.75</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>-1.3</x>
+        <y>0.78</y>
+        <z>-0.94</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>0.835</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>-0.125</x>
+          <y>0</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>0</y>
+          <z>0.75</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>-0.42</x>
+        <y>0.94</y>
+        <z>-1.64</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>1.11</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>-0.855</x>
+          <y>0</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>0</y>
+          <z>0.125</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>
+DATE: 5/28/2022 4:37:13 PM : UPDATE build_object_stage_progress SET trimesh=?trimesh WHERE id=?id
+Params:
+id: 49
+trimesh: <?xml version="1.0" encoding="utf-8"?>
+<AtavismBuildingColliders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <colliders>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>0.44</x>
+        <y>0.78</y>
+        <z>-0.94</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>0.835</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>-0.125</x>
+          <y>0</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>0</y>
+          <z>0.75</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>-1.3</x>
+        <y>0.78</y>
+        <z>-0.94</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>0.835</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>-0.125</x>
+          <y>0</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>0</y>
+          <z>0.75</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+    <AtavismCollider>
+      <type>Box</type>
+      <position>
+        <x>-0.42</x>
+        <y>0.94</y>
+        <z>-1.64</z>
+      </position>
+      <halfEdges>
+        <AOVector>
+          <x>0</x>
+          <y>1.11</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>-0.855</x>
+          <y>0</y>
+          <z>0</z>
+        </AOVector>
+        <AOVector>
+          <x>0</x>
+          <y>0</y>
+          <z>0.125</z>
+        </AOVector>
+      </halfEdges>
+      <radius>0</radius>
+      <triangles />
+      <bounds />
+    </AtavismCollider>
+  </colliders>
+</AtavismBuildingColliders>

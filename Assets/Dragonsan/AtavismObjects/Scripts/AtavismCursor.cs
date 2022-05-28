@@ -113,6 +113,10 @@ namespace Atavism
             }
             if (mouseOverObject == null && Camera.main != null)
             {
+				if (Input.GetMouseButtonDown(0) && !IsMouseOverUI()) //Remove selected target when clicking somewhere
+                {
+                    ClientAPI.ClearTarget();
+                }
                 AtavismNode hoverObject = null;
                 GameObject mouseOver = null;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

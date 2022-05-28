@@ -5047,11 +5047,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
       propertyPath: _adminRestartSettings.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
       propertyPath: _adminRestartSettings.Array.data[0]._name
-      value: Profile 1
+      value: 2 Min Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
+      propertyPath: _adminRestartSettings.Array.data[1]._name
+      value: Restart NOW
       objectReference: {fileID: 0}
     - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
       propertyPath: _adminRestartSettings.Array.data[0]._message
@@ -5062,7 +5066,15 @@ PrefabInstance:
       value: 60;30;20;5;1;1;1;1
       objectReference: {fileID: 0}
     - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
+      propertyPath: _adminRestartSettings.Array.data[1]._message
+      value: The server will be restarted
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
       propertyPath: _adminRestartSettings.Array.data[0]._schedule
+      value: 60;20;5;1;1;1;1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
+      propertyPath: _adminRestartSettings.Array.data[1]._schedule
       value: 60;20;5;1;1;1;1
       objectReference: {fileID: 0}
     - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
@@ -5072,6 +5084,14 @@ PrefabInstance:
     - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
       propertyPath: _adminRestartSettings.Array.data[0]._CountdownTime
       value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
+      propertyPath: _adminRestartSettings.Array.data[1]._CountdownTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
+      propertyPath: _adminLocationSettings.Array.data[0]._locs.Array.data[1]._name
+      value: Spawn
       objectReference: {fileID: 0}
     - target: {fileID: 114094585752455112, guid: 535b8fcbc2ff6f54f91b6311c1eaf377, type: 3}
       propertyPath: races.Array.data[1].genders.Array.data[1].classes.Array.data[0].name
