@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8740616220511440845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8064550599814998962}
+  - component: {fileID: 8156357276996251190}
+  m_Layer: 0
+  m_Name: Chr_ShoulderAttachLeft_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8064550599814998962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8740616220511440845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8156357276996251190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8740616220511440845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b06434b5506f043a83774757473ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipDisplayType: 0
+  modelName: 
+  model: {fileID: 0}
+  material: {fileID: 0}
+  socket: 24
+  restSocket: 24
+  restRotation: {x: 0, y: 0, z: 0}
+  restPosition: {x: 0, y: 0, z: 0}
+  restScale: {x: 0, y: 0, z: 0}
+  gearType: 0
+  weaponOffset: {fileID: 0}
+  weaponIKOffset: {fileID: 0}
+  enableEquipment: 0
+  maleModel: {fileID: 0}
+  femaleModel: {fileID: 0}
+  headDisables: 0
+  shoulderDisables: 0
+  GearParts:
+  - {fileID: 5349714892615500569, guid: 45a7ad5fe10659c48aaf09aa8b7b7109, type: 3}
+  - {fileID: 5245995471028462646, guid: fca435dca7142214c8f5e6748d04a91b, type: 3}
+  FemaleGearParts: []
+  RaceDisplayItem: []

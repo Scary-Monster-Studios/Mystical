@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5183174101324170395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3165092446899045040}
+  - component: {fileID: 1675504818351801070}
+  m_Layer: 0
+  m_Name: Chr_Gloves_14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3165092446899045040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183174101324170395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675504818351801070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183174101324170395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b06434b5506f043a83774757473ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipDisplayType: 3
+  modelName: 
+  model: {fileID: 0}
+  material: {fileID: 0}
+  socket: 10
+  restSocket: 15
+  restRotation: {x: 0, y: 0, z: 0}
+  restPosition: {x: 0, y: 0, z: 0}
+  restScale: {x: 0, y: 0, z: 0}
+  gearType: 0
+  weaponOffset: {fileID: 0}
+  weaponIKOffset: {fileID: 0}
+  enableEquipment: 0
+  maleModel: {fileID: 0}
+  femaleModel: {fileID: 0}
+  headDisables: 0
+  shoulderDisables: 0
+  GearParts:
+  - {fileID: 903914077200544527, guid: 7120723572e5f864ebf2c7701c9c5422, type: 3}
+  - {fileID: 4293393211370774132, guid: b81c5588d49721c4fa8e09c19adb12a1, type: 3}
+  FemaleGearParts:
+  - {fileID: 8870457744556299556, guid: e519b930be497ea40a9d60fab2c7a616, type: 3}
+  - {fileID: 2279145623439934406, guid: 858835d1c6e848c42986a76667704d3b, type: 3}

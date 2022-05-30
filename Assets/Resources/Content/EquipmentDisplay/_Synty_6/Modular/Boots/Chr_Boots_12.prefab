@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3943064423648218441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2442016614456325760}
+  - component: {fileID: 6534273046100056750}
+  m_Layer: 0
+  m_Name: Chr_Boots_12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2442016614456325760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943064423648218441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6534273046100056750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943064423648218441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b06434b5506f043a83774757473ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipDisplayType: 3
+  modelName: 
+  model: {fileID: 0}
+  material: {fileID: 0}
+  socket: 1
+  restSocket: 1
+  restRotation: {x: 0, y: 0, z: 0}
+  restPosition: {x: 0, y: 0, z: 0}
+  restScale: {x: 0, y: 0, z: 0}
+  gearType: 0
+  weaponOffset: {fileID: 0}
+  weaponIKOffset: {fileID: 0}
+  maleModel: {fileID: 0}
+  femaleModel: {fileID: 0}
+  headDisables: 0
+  shoulderDisables: 0
+  GearParts:
+  - {fileID: 211845435364866872, guid: 0b7d633009573ad46b68226218fae74d, type: 3}
+  - {fileID: 5942661056500424178, guid: 2d29532b3ee803e4587df3218176cddd, type: 3}
+  FemaleGearParts:
+  - {fileID: 1553583129614570628, guid: 62b4bd45a33db78438008b5e2fe0f4fb, type: 3}
+  - {fileID: 4127383531243641319, guid: 22ff2067cfd97124d9324a3cedc546ef, type: 3}

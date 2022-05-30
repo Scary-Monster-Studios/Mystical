@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8635964225111143456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4395026112268728824}
+  - component: {fileID: 2840748769206953741}
+  m_Layer: 0
+  m_Name: Chr_Pants_28
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4395026112268728824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635964225111143456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2840748769206953741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635964225111143456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b06434b5506f043a83774757473ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipDisplayType: 3
+  modelName: 
+  model: {fileID: 0}
+  material: {fileID: 0}
+  socket: 3
+  restSocket: 3
+  restRotation: {x: 0, y: 0, z: 0}
+  restPosition: {x: 0, y: 0, z: 0}
+  restScale: {x: 0, y: 0, z: 0}
+  gearType: 0
+  weaponOffset: {fileID: 0}
+  weaponIKOffset: {fileID: 0}
+  maleModel: {fileID: 0}
+  femaleModel: {fileID: 0}
+  headDisables: 0
+  shoulderDisables: 0
+  GearParts:
+  - {fileID: 484767234892863309, guid: e780d1a0ea0fc204d8e25c69c181bcce, type: 3}
+  FemaleGearParts:
+  - {fileID: 1368283405797346909, guid: 110486ae776ca0e4ba3a2d6bb52105a9, type: 3}

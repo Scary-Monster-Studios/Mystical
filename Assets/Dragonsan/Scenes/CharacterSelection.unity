@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.81025445, g: 0.8401928, b: 0.90016556, a: 0.7860083}
+  m_FogColor: {r: 0.8141112, g: 0.8432297, b: 0.90156025, a: 0.7893046}
   m_FogMode: 2
-  m_FogDensity: 0.00005
+  m_FogDensity: 0.000005
   m_LinearFogStart: 20
   m_LinearFogEnd: 500
   m_AmbientSkyColor: {r: 0.44690856, g: 0.51993287, b: 0.5695894, a: 0.7448476}
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.2
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 1518123360}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.17939368, g: 0.24006858, b: 0.32577252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -858,11 +858,174 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     stopRotationAtHigh: 0
     rotationStopHigh: 0.5
-    exposure: 8
+    usePhysicalBasedLighting: 1
+    sunIntensityLux:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 120000
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    moonIntensityLux:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    lightColorTemperature:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    lightColorTint:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
     controlSceneExposure: 1
+    exposure: 8
     skyExposure: 7
-    lightExposure: 7
+    lightIntensityLuxMult: 7
+    exposurePhysical:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 14.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    skyExposurePhysical:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 14.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ambientColorMod:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    indirectLightingUpdateMode: 0
   volumeLightSettings:
+    Resolution: 2
     dirVolumeLighting: 1
     SampleCount: 8
     ScatteringCoef:
@@ -1366,7 +1529,23 @@ MonoBehaviour:
     globalReflectionLayers:
       serializedVersion: 2
       m_Bits: 0
+    updateDefaultEnvironmentReflections: 0
+    reflectionCloudsQuality: {fileID: 0}
   cloudsSettings:
+    cloudsQualitySettings:
+      bottomCloudHeight: 3000
+      topCloudHeight: 7000
+      raymarchSteps: 150
+      stepsInDepthModificator: 0.75
+      transmissionToExit: 0.05
+      cloudsRenderResolution: 1
+      reprojectionPixelSize: 0
+      lodDistance: 0.5
+      baseNoiseUV: 20
+      detailNoiseUV: 50
+      useCurlNoise: 0
+      baseQuality: 0
+      detailQuality: 0
     cloudsWorldScale: 120000
     cloudsHeightMod: 0
     cloudsSkyFogHeightBlending: 15000
@@ -1793,6 +1972,35 @@ MonoBehaviour:
     fogExposure: 1
     useEnviroGroundFog: 0
     useHDRPFog: 1
+    fogColorTint:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
   lightshaftsSettings:
     resolution: 0
     screenBlendMode: 0
@@ -2087,6 +2295,50 @@ MonoBehaviour:
     antiFlicker: 1
     highQuality: 1
     radius: 7
+  auroraSettings:
+    auroraIntensity:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    auroraColor: {r: 0.1, g: 0.5, b: 0.7, a: 1}
+    auroraBrightness: 75
+    auroraContrast: 10
+    auroraHeight: 20000
+    auroraScale: 0.01
+    auroraSteps: 20
+    auroraLayer1Settings: {x: 0.1, y: 0.1, z: 0, w: 0.5}
+    auroraLayer2Settings: {x: 5, y: 5, z: 0, w: 0.5}
+    auroraColorshiftSettings: {x: 0.05, y: 0.05, z: 0, w: 5}
+    auroraSpeed: 0.005
   internalHour: 12
   currentHour: 12
   currentDay: 1
@@ -2095,12 +2347,12 @@ MonoBehaviour:
   LST: 641.0238
   lastHourUpdate: 12
   hourTime: 0
-  cloudAnim: {x: 0, y: 0.5373941, z: -0.6938576}
-  cloudFlatBaseAnim: {x: 0, y: 0.65350634}
-  cloudFlatDetailAnim: {x: 0, y: 0.35589558}
-  cloudAnimNonScaled: {x: 0, y: -5.3466067}
-  cirrusAnim: {x: 0, y: -0.26732844}
-  windIntensity: 0.24999994
+  cloudAnim: {x: 0, y: 0.31311828, z: 0.861298}
+  cloudFlatBaseAnim: {x: 0, y: 0.43107948}
+  cloudFlatDetailAnim: {x: 0, y: 0.7980487}
+  cloudAnimNonScaled: {x: 0, y: -5.569274}
+  cirrusAnim: {x: 0, y: -0.2784621}
+  windIntensity: 0.24999999
   shadowIntensityMod: 0
   interiorMode: 0
   lastInteriorZone: {fileID: 0}
@@ -2109,14 +2361,16 @@ MonoBehaviour:
   customFogIntensity: 0
   currentWeatherSkyMod: {r: 0, g: 0, b: 0, a: 0}
   currentWeatherLightMod: {r: 1, g: 1, b: 1, a: 0}
-  currentWeatherFogMod: {r: 0.4971195, g: 0.59361964, b: 0.78692967, a: 0.31024146}
+  currentWeatherFogMod: {r: 0.4971195, g: 0.59361964, b: 0.78692967, a: 0.30174604}
   customMoonPhase: 0.098401554
+  globalVolumeLightIntensity: 0.5
   MainLight: {fileID: 986753627}
   AdditionalLight: {fileID: 0}
   MoonTransform: {fileID: 1192809976}
   lastAmbientSkyUpdate: 0
   lastRelfectionUpdate: 17677716
   lastRelfectionPositionUpdate: {x: -183.0599, y: 72.29232, z: 190.34618}
+  defaultSkyReflectionTex: {fileID: 0}
   EffectsHolder: {fileID: 1678104253}
   lightningEffect: {fileID: 1989324441}
   GameTime:
@@ -2162,6 +2416,7 @@ MonoBehaviour:
     lastActiveWeatherPrefab: {fileID: 0}
     lastActiveWeatherPreset: {fileID: 0}
     VFXHolder: {fileID: 44225720}
+    SFXHolder: {fileID: 1469447538}
     wetness: 0
     curWetness: 0
     snowStrength: 0
@@ -2187,9 +2442,9 @@ MonoBehaviour:
     starsRotation: {fileID: 151233976}
     particleClouds: {fileID: 1645319772}
   Fog:
-    skyFogStart: 0.02
-    skyFogHeight: 5
-    skyFogIntensity: 0.2
+    skyFogStart: 0.2
+    skyFogHeight: 0.45
+    skyFogIntensity: 0.09
     skyFogStrength: 0.1
     scatteringStrenght: 1.25
     sunBlocking: 1
@@ -2209,11 +2464,15 @@ MonoBehaviour:
   setCameraClearFlags: 1
   frames: 0
   lightingUpdateEachFrames: 10
+  currentSceneExposureMod: 1
+  currentSkyExposureMod: 1
+  currentLightIntensityMod: 1
+  additionalCameras: []
   useParticleClouds: 0
   usePostEffectFog: 1
   showFogInEditor: 1
   EnviroSkyRender: {fileID: 294653610}
-  skyMat: {fileID: 0}
+  skyMat: {fileID: 1518123360}
   showSettings: 1
 --- !u!4 &43179711
 Transform:
@@ -4096,6 +4355,8 @@ MonoBehaviour:
   rendering: 0
   myProbe: {fileID: 127400656}
   customRendering: 0
+  customCloudsQuality: {fileID: 0}
+  useFog: 0
 --- !u!1 &130511790
 GameObject:
   m_ObjectHideFlags: 0
@@ -6899,7 +7160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAddionalCamera: 0
-  material: {fileID: 0}
+  material: {fileID: 1635219706}
   simpleFog: 0
 --- !u!1001 &295142120
 PrefabInstance:
@@ -7308,6 +7569,7 @@ MonoBehaviour:
   skyBaking:
     resolution: 2048
   currentEnviroSkyVersion: 1
+  enviroHDInstance: {fileID: 0}
   enviroLWInstance: {fileID: 43179710}
 --- !u!4 &332313602
 Transform:
@@ -14814,8 +15076,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 585838384}
   m_HandleRect: {fileID: 585838383}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.5
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15165,7 +15427,7 @@ MonoBehaviour:
   createPanelRace: {fileID: 871508483}
   avatarList: {fileID: 688063507}
   avatarIcon: {fileID: 937761969}
-  cameraInLoc: {x: 0.7, y: 0.05, z: -0.3}
+  cameraInLoc: {x: 0.7, y: 1.5, z: -0.5}
   cameraOutLoc: {x: 2.5, y: 1, z: -1}
   characterRotationSpeed: 250
   modularCharacterSliderList: []
@@ -16173,7 +16435,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26653,7 +26915,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.91764706, g: 0.8388945, b: 0.7577568, a: 1}
-  m_Intensity: 1.5023346
+  m_Intensity: 1.502335
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -39501,7 +39763,7 @@ WindZone:
   m_Enabled: 1
   m_Mode: 0
   m_Radius: 20
-  m_WindMain: 0.24999994
+  m_WindMain: 0.24999999
   m_WindTurbulence: 0.2
   m_WindPulseMagnitude: 0.2
   m_WindPulseFrequency: 0.01
@@ -39745,6 +40007,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1518123360
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Lite/SkyboxSimple
+  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FlatCloudsBaseTexture:
+        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlatCloudsDetailTexture:
+        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MoonTex:
+        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stars:
+        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _HorizonColor: {r: 0.95109713, g: 0.95109713, b: 0.95109713, a: 1}
+    - _SkyColor: {r: 0.3825711, g: 0.5592251, b: 0.7239537, a: 0.8737751}
+    - _SunColor: {r: 0.9666091, g: 0.86721677, b: 0.7669759, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &1526851446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40193,7 +40496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000091552734, y: -127.31999}
+  m_AnchoredPosition: {x: 0.000091552734, y: 0.000015258789}
   m_SizeDelta: {x: 0.000061035, y: 10}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1547975265
@@ -40228,8 +40531,10 @@ MonoBehaviour:
   pickerLoc: {fileID: 556072427}
   dnaSliders:
   - Hair
+  - Torso
   dnaSlidersNames:
   - Hair
+  - Torso
   dnaColors:
   - HairColor
   dnaColorNames:
@@ -41722,6 +42027,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af1d8e09d18037439ba6a382522459a, type: 3}
+--- !u!21 &1635219706
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Lite/EnviroFogRendering
+  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats: []
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1001 &1635247766
 PrefabInstance:
   m_ObjectHideFlags: 0
