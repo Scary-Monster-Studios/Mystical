@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.2
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 1518123360}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2347,11 +2347,11 @@ MonoBehaviour:
   LST: 641.0238
   lastHourUpdate: 12
   hourTime: 0
-  cloudAnim: {x: 0, y: 0.31311828, z: 0.861298}
-  cloudFlatBaseAnim: {x: 0, y: 0.43107948}
-  cloudFlatDetailAnim: {x: 0, y: 0.7980487}
-  cloudAnimNonScaled: {x: 0, y: -5.569274}
-  cirrusAnim: {x: 0, y: -0.2784621}
+  cloudAnim: {x: 0, y: 0.63245744, z: -0.27549154}
+  cloudFlatBaseAnim: {x: 0, y: -0.13731524}
+  cloudFlatDetailAnim: {x: 0, y: 0.6004467}
+  cloudAnimNonScaled: {x: 0, y: -6.1382203}
+  cirrusAnim: {x: 0, y: -0.30690852}
   windIntensity: 0.24999999
   shadowIntensityMod: 0
   interiorMode: 0
@@ -2472,7 +2472,7 @@ MonoBehaviour:
   usePostEffectFog: 1
   showFogInEditor: 1
   EnviroSkyRender: {fileID: 294653610}
-  skyMat: {fileID: 1518123360}
+  skyMat: {fileID: 1076069386}
   showSettings: 1
 --- !u!4 &43179711
 Transform:
@@ -4147,7 +4147,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 840358266}
   m_HandleRect: {fileID: 840358265}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6210,6 +6210,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4851669026079610, guid: 2af1d8e09d18037439ba6a382522459a, type: 3}
   m_PrefabInstance: {fileID: 1938871817}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &214924437
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Lite/EnviroFogRendering
+  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats: []
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1001 &218205222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7160,7 +7182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAddionalCamera: 0
-  material: {fileID: 1635219706}
+  material: {fileID: 214924437}
   simpleFog: 0
 --- !u!1001 &295142120
 PrefabInstance:
@@ -15427,7 +15449,7 @@ MonoBehaviour:
   createPanelRace: {fileID: 871508483}
   avatarList: {fileID: 688063507}
   avatarIcon: {fileID: 937761969}
-  cameraInLoc: {x: 0.7, y: 1.5, z: -0.5}
+  cameraInLoc: {x: 1, y: 1.5, z: -0.5}
   cameraOutLoc: {x: 2.5, y: 1, z: -1}
   characterRotationSpeed: 250
   modularCharacterSliderList: []
@@ -16015,7 +16037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -332, y: 217.3}
+  m_AnchoredPosition: {x: -187.3, y: 116.8}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556072428
@@ -28343,6 +28365,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4425120687046650, guid: f5db859bd59d61140ade0f32cdaf599f, type: 3}
   m_PrefabInstance: {fileID: 1066296039}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1076069386
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Lite/SkyboxSimple
+  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FlatCloudsBaseTexture:
+        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlatCloudsDetailTexture:
+        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MoonTex:
+        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stars:
+        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _HorizonColor: {r: 0.95109713, g: 0.95109713, b: 0.95109713, a: 1}
+    - _SkyColor: {r: 0.3825711, g: 0.5592251, b: 0.7239537, a: 0.8737751}
+    - _SunColor: {r: 0.9666091, g: 0.86721677, b: 0.7669759, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &1078580880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28609,8 +28672,18 @@ MonoBehaviour:
   dnaColorPrefab: {fileID: 6565103575585520736, guid: 0043a846a024b4d4aa5e57e8e76d9fe9, type: 3}
   ColorPickerPrefab: {fileID: 3388568702305191358, guid: 14360b6c1d1bf5741a3c724c4df29b57, type: 3}
   pickerLoc: {fileID: 556072427}
-  dnaSliders: []
-  dnaSlidersNames: []
+  dnaSliders:
+  - Torso
+  - UpperArms
+  - LowerArms
+  - Hips
+  - LowerLegs
+  dnaSlidersNames:
+  - Upper Body
+  - Upper Arms
+  - Lower Arms
+  - Lower Body
+  - Legs
   dnaColors:
   - SkinColor
   dnaColorNames:
@@ -40007,47 +40080,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1518123360
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Lite/SkyboxSimple
-  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _FlatCloudsBaseTexture:
-        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FlatCloudsDetailTexture:
-        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MoonTex:
-        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Stars:
-        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _HorizonColor: {r: 0.95109713, g: 0.95109713, b: 0.95109713, a: 1}
-    - _SkyColor: {r: 0.3825711, g: 0.5592251, b: 0.7239537, a: 0.8737751}
-    - _SunColor: {r: 0.9666091, g: 0.86721677, b: 0.7669759, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &1526851446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40531,14 +40563,26 @@ MonoBehaviour:
   pickerLoc: {fileID: 556072427}
   dnaSliders:
   - Hair
-  - Torso
+  - Beard
+  - Face
   dnaSlidersNames:
   - Hair
-  - Torso
+  - Beard
+  - Scars and Body Art
   dnaColors:
   - HairColor
+  - BeardColor
+  - ScarColor
+  - BodyArtColor
+  - EyeColor
+  - StubbleColor
   dnaColorNames:
   - Hair Color
+  - Beard Color
+  - Scar Color
+  - Body Art Color
+  - Eye Color
+  - Stubble Color
 --- !u!114 &1547975267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42027,28 +42071,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af1d8e09d18037439ba6a382522459a, type: 3}
---- !u!21 &1635219706
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Lite/EnviroFogRendering
-  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats: []
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1001 &1635247766
 PrefabInstance:
   m_ObjectHideFlags: 0
