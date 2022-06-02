@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Threading.Tasks;
 using MHLab.Patch.Core.Client;
@@ -63,7 +63,7 @@ namespace MHLab.Patch.Launcher.Scripts
 
             if (Data.SoftwareVersion != null)
             {
-                Data.SoftwareVersion.text = $"v{settings.SoftwareVersion}";
+	            Data.SoftwareVersion.text = "v"+Application.version;
             }
 
             Initialize(Context);
