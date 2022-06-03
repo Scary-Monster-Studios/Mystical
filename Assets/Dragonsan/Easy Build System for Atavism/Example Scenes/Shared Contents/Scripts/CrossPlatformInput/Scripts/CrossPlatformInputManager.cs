@@ -23,9 +23,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		{
 			s_TouchInput = new MobileInput();
 			s_HardwareInput = new StandaloneInput();
-
 #if MOBILE_INPUT
-			Debug.LogWarning("MOBILE_INPUT is defined in <b>Scriptings Define Symbols</b>, the controls via the keyboard does not work!");		
             activeInput = s_TouchInput;
 #else
 			activeInput = s_HardwareInput;
